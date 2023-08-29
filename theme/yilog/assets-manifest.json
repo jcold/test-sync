@@ -1,0 +1,25 @@
+{
+  "daobox-theme.yaml": "daobox-theme.yaml",
+  "entrypoints": {
+    "main": {
+      "assets": {
+        "css": [
+          "assets/main.3c08effd.css"
+        ],
+        "js": [
+          "assets/main.3c08effd.js"
+        ]
+      }
+    }
+  },
+  "main.css": "assets/main.3c08effd.css",
+  "main.js": "assets/main.3c08effd.js",
+  "templates/_daobox/blocks.html": "templates/_daobox/blocks.html",
+  "templates/_daobox/blocks/nav.html": "templates/_daobox/blocks/nav.html",
+  "templates/_daobox/layout.html": "templates/_daobox/layout.html",
+  "templates/_daobox/prism.html": "templates/_daobox/prism.html",
+  "templates/_daobox/source/daobox_cfg.toml": "templates/_daobox/source/daobox_cfg.toml",
+  "templates/_daobox/source/site_info.toml": "templates/_daobox/source/site_info.toml",
+  "templates/detail.html": "templates/detail.html",
+  "templates/index.html": "templates/index.html"
+}

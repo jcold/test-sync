@@ -1,0 +1,15 @@
+cfg:
+  site:
+    name: 大余之道
+    contact: 联系方式：dayu[at]dayu.me，请注意替换@。
+    summary: 资质平平的互联网从业者，至今碌碌无为，毫无建树，但始终坚信未来可期的大龄码农。
+    description: 大余的修行日志。
+    keywords: 大余, 道盒, dayu
+    beian: 
+context:
+  # - location:
+  #     - /docs/
+  #   qs:
+  #     __tpl: /book.html
+  #     nav: /docs/_nav.md
+  #     ajax: /docs/
