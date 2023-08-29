@@ -14,6 +14,5 @@ preview:
 	daobox-site serve
 
 gen:
-	pnpm i
 	daobox-site serve --export
 
