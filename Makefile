@@ -7,12 +7,14 @@ tag:
 
 export_l:
 	DAOBOX_LOG=info,daobox_site=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve \
-		--work-dir ./dist \
 		--dist-dir ./dist --export
 
 preview:
-	daobox-site serve
+	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve
 
+web:
+	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site web --work-dir dist
+ 
 gen:
 	daobox-site serve --export
 
