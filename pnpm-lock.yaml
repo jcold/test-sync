@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   daobox-site:
-    specifier: ^0.3.5
-    version: 0.3.5
+    specifier: ^0.4.1
+    version: 0.4.1
 
 packages:
 
@@ -16,19 +16,54 @@ packages:
     engines: {node: '>=6.0'}
     dev: true
 
+  /agent-base@6.0.2:
+    resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
+    engines: {node: '>= 6.0.0'}
+    dependencies:
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
     dev: true
 
-  /daobox-site@0.3.5:
-    resolution: {integrity: sha512-fGdaggBBifTdRhYoDFm3g9pfM/b095uhAXxsbV2r2tMMwoqX6ew18FBBEaPPUoB2PhQuuoj3mRHynGer7fSCZw==}
+  /daobox-site@0.4.1:
+    resolution: {integrity: sha512-e5snHmMfOnPhMunw1KyJZ9sfId8TuUGfjDgsG7oI9FGqT49fTHCHT5lL6B1QB5ScAkjXTFuPoAgfYgzgCr/gfw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     dependencies:
       adm-zip: 0.5.10
+      nodejs-file-downloader: 4.12.1
       tar: 6.1.15
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+    dev: true
+
+  /debug@4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
+  /follow-redirects@1.15.2:
+    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: true
 
   /fs-minipass@2.1.0:
@@ -36,6 +71,28 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       minipass: 3.3.6
+    dev: true
+
+  /https-proxy-agent@5.0.1:
+    resolution: {integrity: sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==}
+    engines: {node: '>= 6'}
+    dependencies:
+      agent-base: 6.0.2
+      debug: 4.3.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /mime-db@1.52.0:
+    resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
+    engines: {node: '>= 0.6'}
+    dev: true
+
+  /mime-types@2.1.35:
+    resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
+    engines: {node: '>= 0.6'}
+    dependencies:
+      mime-db: 1.52.0
     dev: true
 
   /minipass@3.3.6:
@@ -64,6 +121,28 @@ packages:
     hasBin: true
     dev: true
 
+  /ms@2.1.2:
+    resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    dev: true
+
+  /nodejs-file-downloader@4.12.1:
+    resolution: {integrity: sha512-LpfCTNhh805AlLnJnzt1PuEj+RmbrccbAQZ6hBRw2e6QPVR0Qntuo6qqyvPHG5s77/0w0IEKgRAD4nbSnr/X4w==}
+    dependencies:
+      follow-redirects: 1.15.2
+      https-proxy-agent: 5.0.1
+      mime-types: 2.1.35
+      sanitize-filename: 1.6.3
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+    dev: true
+
+  /sanitize-filename@1.6.3:
+    resolution: {integrity: sha512-y/52Mcy7aw3gRm7IrcGDFx/bCk4AhRh2eI9luHOQM86nZsqwiRkkq2GekHXBBD+SmPidc8i2PqtYZl+pWJ8Oeg==}
+    dependencies:
+      truncate-utf8-bytes: 1.0.2
+    dev: true
+
   /tar@6.1.15:
     resolution: {integrity: sha512-/zKt9UyngnxIT/EAGYuxaMYgOIJiP81ab9ZfkILq4oNLPFX50qyYmu7jRj9qeXoxmJHjGlbH0+cm2uy1WCs10A==}
     engines: {node: '>=10'}
@@ -74,6 +153,16 @@ packages:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
+    dev: true
+
+  /truncate-utf8-bytes@1.0.2:
+    resolution: {integrity: sha512-95Pu1QXQvruGEhv62XCMO3Mm90GscOCClvrIUwCM0PYOXK3kaF3l3sIHxx71ThJfcbM2O5Au6SO3AWCSEfW4mQ==}
+    dependencies:
+      utf8-byte-length: 1.0.4
+    dev: true
+
+  /utf8-byte-length@1.0.4:
+    resolution: {integrity: sha512-4+wkEYLBbWxqTahEsWrhxepcoVOJ+1z5PGIjPZxRkytcdSUaNjIjBM7Xn8E+pdSuV7SzvWovBFA54FO0JSoqhA==}
     dev: true
 
   /yallist@4.0.0:
