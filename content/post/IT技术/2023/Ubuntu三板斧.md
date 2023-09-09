@@ -1,4 +1,5 @@
 ```yaml
+title: Ubuntu/Linux 三板斧
 date: 2023-08-31 11:36
 ```
 
@@ -122,3 +123,17 @@ sdc                         8:32   0 953.9G  0 disk
 
 
 Ref: https://blog.yqxpro.com/2021/10/31/%E9%80%9A%E8%BF%87LVM%E7%BB%99Ubuntu%E6%B7%BB%E5%8A%A0%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4/
+
+
+### ssh与socks代理
+
+```bash
+# 本地拨入远程主机，并打开一个Socks5代理
+ssh  -p 11022 -D 127.0.0.1:1337 -N root@y4.yuid.org
+```
+
+**参数**
+
+* `p`: 远程主机ssh端口 
+* `D`: 本地监听的地址与端口
+* `N`: 不执行命令，仅作端口转发
