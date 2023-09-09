@@ -114,3 +114,19 @@ SELECT pg_terminate_backend(pg_stat_activity.pid)
     FROM pg_stat_activity
     WHERE pg_stat_activity.usename = 'tehaochi';
 ```
+
+### Mac本地的裸跑PG数据库
+
+```bash
+# 初始化数据库
+initdb --locale=C -E UTF-8 /usr/local/var/postgresql@14
+
+# 服务启动
+brew services start postgresql@14
+
+# 启动命令
+/usr/local/opt/postgresql@14/bin/postgres -D /usr/local/var/postgresql@14
+
+# 命令连接
+psql -h localhost -U dayu -d postgres
+```
