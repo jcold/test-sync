@@ -23,3 +23,35 @@ docker run -v /root/openvpn:/etc/openvpn --log-driver=none --rm -it kylemanna/op
 # 导出用户客户端证书
 docker run -v /root/openvpn:/etc/openvpn --log-driver=none --rm kylemanna/openvpn ovpn_getclient dayu > member/dayu.ovpn
 ```
+
+### Http 代理
+
+```bash
+# 启动一个HTTP代理
+docker run --restart=always --name=proxy -d -e SQUID_USERNAME=dayu -e SQUID_PASSWORD=K4zm8fZV6jw0n -p 8008:3128 robhaswell/squid-authenticated
+
+# 代理验证
+curl -x http://dayu:K4zm8fZV6jw0n@dayu.me:8008/  http://ip.gs
+```
+
+### 镜像管理
+
+```bash
+docker images --format '{{.Size}}\t{{.Repository}}\t{{.Tag}}\t{{.ID}}' | sort -h
+
+docker exec -it dev-registry-1 bin/registry garbage-collect /etc/docker/registry/config.yml
+
+docker exec -it <registry_container_id> bin/registry delete <image_name>:<tag>
+
+dev.liveio.cn:5000/v2/_catalog
+
+curl -k -X GET https://dev.liveio.cn:5000/v2/_catalog
+curl -k -X GET https://dev.liveio.cn:5000/v2/gobuilder/tags/list
+curl -k -X GET https://dev.liveio.cn:5000/v2/devops/rust-linux-darwin-builder/tags/list
+```
+
+### 删除废弃docker镜像
+
+```bash
+docker rmi $(docker images -f "dangling=true" -q)
+```

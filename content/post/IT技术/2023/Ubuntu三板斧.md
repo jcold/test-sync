@@ -125,11 +125,11 @@ sdc                         8:32   0 953.9G  0 disk
 Ref: https://blog.yqxpro.com/2021/10/31/%E9%80%9A%E8%BF%87LVM%E7%BB%99Ubuntu%E6%B7%BB%E5%8A%A0%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4/
 
 
-### ssh与socks代理
+### ssh与socks5代理
 
 ```bash
 # 本地拨入远程主机，并打开一个Socks5代理
-ssh  -p 11022 -D 127.0.0.1:1337 -N root@y4.yuid.org
+ssh  -p 11022 -D 127.0.0.1:1337 -N root@y4.dayu.me
 ```
 
 **参数**
@@ -137,3 +137,12 @@ ssh  -p 11022 -D 127.0.0.1:1337 -N root@y4.yuid.org
 * `p`: 远程主机ssh端口 
 * `D`: 本地监听的地址与端口
 * `N`: 不执行命令，仅作端口转发
+
+
+### ssh反向代理
+
+```bash
+# 将本地的9080端口反向拨入到远程主机y4.dayu.me的5001端口，远程主机的ssh端口为11022。
+# 最后的作用是：y4.dayu.me:5001  -> localhost:9080
+ssh -CNR 5001:localhost:9080 root@y4.dayu.me -p 11022
+```

@@ -2,6 +2,18 @@
 date: 2023-09-09 16:22
 ```
 
+## 本地启动Jenkins服务
+
+```bash
+java \
+  -Djavax.net.ssl.trustStore=$JAVA_HOME/jre/lib/security/jssecacerts \
+  -Djavax.net.ssl.trustStorePassword=changeit \
+  -Dcom.sun.net.ssl.checkRevocation=false \
+  -jar jenkins.war --httpPort=8080
+```
+
+## Pipeline 示例
+
 之前用Jenkins的Pipeline做了一个自动打包的任务，现在都用一体化的CI/CD了，因此特将之前的配置记录下来以备之后查阅。
 
 ```groovy
