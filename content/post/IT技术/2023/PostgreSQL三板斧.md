@@ -74,6 +74,12 @@ SELECT pg_size_pretty(pg_database_size(current_database()));
 -- 指定表和索引空间
 -- ref: https://pgpedia.info/p/pg_total_relation_size.html
 SELECT pg_size_pretty(pg_total_relation_size('your table'));
+
+-- 踢出所有指定数据库的连接
+SELECT pg_terminate_backend (pid) FROM pg_stat_activity WHERE datname = 'db';
+
+-- 数据重命名（需要先断开与该库的连接）
+ALTER DATABASE db RENAME TO newdb;
 ```
 
 
