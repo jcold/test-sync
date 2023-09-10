@@ -4,7 +4,7 @@ date: 2023-09-10 11:13
 
 用了这么长时间文本编辑器，总对格式不能自由掌控感到不快，直到使用了Markdown。Markdown是近年来较为流行的文本标记语言，简单易用是它的核心特点，因为简单，所以格式不是那么丰富，在某些场景下无法满足需求，若是退回，则又回到开始，纠结使用哪个编辑器。索性今天整理下Markdown语法诉求，看看能否对其扩展，以满足日常需求？
 
-# 标准语法
+# 标准语法 ✅
 
 详见[Markdown语法标准](https://daringfireball.net/projects/markdown/syntax)[^markdown-syntax]。部分格式有几种表达方式，这里仅罗列其一种。
 
@@ -64,7 +64,7 @@ console.log('代码块+语法高亮')
 
 # 扩展语法
 
-## 自动转换链接
+## 自动转换链接 ✅
 
 ```markdown
 <https://www.daobox.cn>
@@ -73,7 +73,12 @@ console.log('代码块+语法高亮')
 
 ## 指定属性
 
-可以对标题、链接、图片增加属性，属性支持CSS样式名，ID，和其他自定义属性
+可以对下面块增加属性，属性支持CSS样式名，ID，和其他自定义属性
+
+1. 标题 ✅
+2. 链接 🔲
+3. 图片 🔲
+
 
 <pre>
 # 标题  {.main .shine #the-site lang=fr}
@@ -84,7 +89,7 @@ console.log('代码块+语法高亮')
 </pre>
 
 
-## 表格 {.main .shine #the-site lang=fr}
+## 表格 {.main .shine #the-site lang=fr} ✅
 
 <pre>
 First Header  | Second Header
@@ -117,7 +122,7 @@ Content Cell  | Content Cell
 | Content   | Content | Content | Content |
 
 
-## 定义列表 （Definition Lists）
+## 定义列表 （Definition Lists） 🔲
 
 <pre>
 Apple
@@ -129,7 +134,7 @@ Orange
 </pre>
 
 
-## 脚注/引用
+## 脚注/引用 ✅
 
 `^`字符后面可以用字母与下划线组合，渲染时系统自动重新编号。
 
@@ -142,7 +147,7 @@ That's some text with a footnote.[^1]
 
 
 
-## 缩写词
+## 缩写词 🔲
 
 <pre>
 *[HTML]: Hyper Text Markup Language
@@ -165,7 +170,7 @@ is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
 
 ## 强调扩展
 
-### 删除线
+### 删除线 ✅
 
 ```markdown
 ~~删除线~~
@@ -173,7 +178,7 @@ is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
 
 ~~删除线~~
 
-### 下划线
+### 下划线 🔲
 
 ```markdown
 __下划线__
@@ -181,7 +186,7 @@ __下划线__
 
 __下划线__
 
-### 上标
+### 上标 🔲
 
 ```markdown
 E=MC^2^
@@ -189,7 +194,7 @@ E=MC^2^
 
 E=MC^2^
 
-### 下标
+### 下标 🔲
 
 ```markdown
 H~2~O
@@ -198,7 +203,7 @@ H~2~O
 H~2~O
 
 
-## 任务列表
+## 任务列表 ✅
 
 ```markdown
 - [x] Write the press release
@@ -210,7 +215,7 @@ H~2~O
 - [ ] Update the website
 - [ ] Contact the media
 
-## 高亮
+## 高亮 🔲
 
 ```markdown
 I need to highlight these ==very important words==.
@@ -224,7 +229,7 @@ HTML结果
 I need to highlight these <mark>very important words</mark>.
 ```
 
-## 特殊字符替换
+## 特殊字符替换 ✅
 
 ```markdown
 | => &#124;
@@ -234,12 +239,8 @@ I need to highlight these <mark>very important words</mark>.
 
 ## 常用符号
 
-[HTML特殊符号](https://chaooo.github.io/unicode_css3_content/) [^php-markdown-extra]
-
-
-## emoji 表情符号
-
-[emoji](https://gist.github.com/rxaviers/7360908)
+1. [HTML特殊符号](https://chaooo.github.io/unicode_css3_content/) [^php-markdown-extra] ✅
+2. [emoji表情符号](https://gist.github.com/rxaviers/7360908) 🔲
 
 
 ## 参考
