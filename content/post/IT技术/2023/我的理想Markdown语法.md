@@ -229,6 +229,21 @@ HTML结果
 I need to highlight these <mark>very important words</mark>.
 ```
 
+## 区块属性 🔲
+
+```markdown
+{#notice .note lang="zh"}
+我是一个需要特别注意的段落。
+```
+
+## 文字颜色、背景色、字体 🔲
+
+```markdown
+[color=red, bgcolor=yellow]#赤色#
+
+[font=宋体]#我是有不一样的字体#
+```
+
 ## 特殊字符替换 ✅
 
 ```markdown
