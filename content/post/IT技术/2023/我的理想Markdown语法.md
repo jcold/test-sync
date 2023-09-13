@@ -2,6 +2,8 @@
 date: 2023-09-10 11:13
 ```
 
+**本页目录**
+
 [TOC]
 
 # 补充更新
@@ -264,7 +266,7 @@ I need to highlight these <mark>very important words</mark>.
 
 ## Table of content
 
-对于长篇大作，良好的目录索引（TOC）对阅读很有帮助，所以需要增加TOC的宏标记，在输出时自动替换。
+对于长篇大作，良好的目录索引（TOC）对阅读很有帮助，所以需要增加TOC的宏标记，在输出时自动替换。使用效果见本页开始。
 
 ```markdown
 [TOC]
@@ -294,6 +296,8 @@ I need to highlight these <mark>very important words</mark>.
 2. [emoji表情符号](https://gist.github.com/rxaviers/7360908) ✅
 
 :smile: :muscle:
+
+查找[表情]录入(https://github-emoji-picker.rickstaa.dev/)
 
 ## 参考
 
