@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   daobox-site:
-    specifier: ^0.4.2
-    version: 0.4.2
+    specifier: ^0.5.0
+    version: 0.5.0
 
 packages:
 
@@ -30,15 +30,15 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /daobox-site@0.4.2:
-    resolution: {integrity: sha512-iePFoTFe2rLP+z7tktBT9fRO0uSDSJlqYyUTRahaoze+17ANob9X0HHbzLzPf5de/fQD29QZts3vRRT8gSpXDA==}
+  /daobox-site@0.5.0:
+    resolution: {integrity: sha512-NkxQbNfvYckfCt8hT9Ta0YFzQMLeRax1CMbfFlv2AmbWOFwYcrmC1wy3IWB0WaYRKp+BFH/BZWFRJPoTrHhq7w==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     dependencies:
       adm-zip: 0.5.10
       nodejs-file-downloader: 4.12.1
-      tar: 6.1.15
+      tar: 6.2.0
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -143,8 +143,8 @@ packages:
       truncate-utf8-bytes: 1.0.2
     dev: true
 
-  /tar@6.1.15:
-    resolution: {integrity: sha512-/zKt9UyngnxIT/EAGYuxaMYgOIJiP81ab9ZfkILq4oNLPFX50qyYmu7jRj9qeXoxmJHjGlbH0+cm2uy1WCs10A==}
+  /tar@6.2.0:
+    resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
     engines: {node: '>=10'}
     dependencies:
       chownr: 2.0.0
