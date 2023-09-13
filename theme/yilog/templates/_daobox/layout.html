@@ -16,6 +16,24 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="Windows-Target" contect="_top" />
+    <style>
+        h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor{
+            visibility: hidden;
+        }
+
+        h1:hover .heading-anchor, h2:hover .heading-anchor, h3:hover .heading-anchor{
+            visibility: visible;
+        }
+
+        .md-toc li {
+            margin-top: 0.1em !important;
+            margin-bottom: 0.1em !important;
+        }
+        .md-toc ul {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    </style>
     {% endblock meta %}
     {% block css %}
     {{ assets(section="main", type="css") }}

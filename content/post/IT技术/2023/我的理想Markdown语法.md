@@ -2,11 +2,22 @@
 date: 2023-09-10 11:13
 ```
 
+[TOC]
+
+# 补充更新
+
+## 更新于：2023-09-12 19:57
+
+比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒博客](https://site.daobox.cn)，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
+
+---
+
 用了这么长时间文本编辑器，总对格式不能自由掌控感到不快，直到使用了Markdown。Markdown是近年来较为流行的文本标记语言，简单易用是它的核心特点，因为简单，所以格式不是那么丰富，在某些场景下无法满足需求，若是退回，则又回到开始，纠结使用哪个编辑器。索性今天整理下Markdown语法诉求，看看能否对其扩展，以满足日常需求？
 
-# 标准语法 ✅
+# 语法来源 ✅
 
-详见[Markdown语法标准](https://daringfireball.net/projects/markdown/syntax)[^markdown-syntax]。部分格式有几种表达方式，这里仅罗列其一种。
+1. 基于[Markdown标准语法](https://daringfireball.net/projects/markdown/syntax)[^markdown-syntax]。部分格式有几种表达方式，这里仅罗列其一种。
+2. 补充[Github Markdown](https://github.github.com/gfm/)扩展语法[^gfm]。
 
 <pre>
 
@@ -62,7 +73,7 @@ console.log('代码块+语法高亮')
 </pre>
 
 
-# 扩展语法
+# 标准语法扩展
 
 ## 自动转换链接 ✅
 
@@ -70,26 +81,52 @@ console.log('代码块+语法高亮')
 <https://www.daobox.cn>
 ```
 
+hello <https://www.daobox.cn>{target=_blank color=red} world
 
-## 指定属性
+
+## 标题、链接、图片扩展属性 ✅ {.main .shine #the-site lang=zh}
 
 可以对下面块增加属性，属性支持CSS样式名，ID，和其他自定义属性
 
 1. 标题 ✅
-2. 链接 🔲
-3. 图片 🔲
+2. 链接 ✅
+3. 图片 ✅
+
+```markdown
+带有扩展属性的[道盒](https://www.daobox.cn){color=orangered}链接。
+
+![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){style="border-radius: 1em;"}
+```
+
+带有扩展属性的[道盒](https://www.daobox.cn){color=orangered}链接。
+
+![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){style="border-radius: 1em;"}
 
 
-<pre>
-# 标题  {.main .shine #the-site lang=fr}
+## 段落属性 ✅
 
-[道盒](https://www.daobox.cn){.main .shine #the-site lang=fr}
+```markdown
+{bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em coner=0.5em}
+这是一段区块示例内容，它拥有扩展属性。
+```
 
-![道盒Logo](https://www.daobox.cn/daobox.svg){.main .shine #the-site lang=fr}
-</pre>
+{bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em coner=0.5em}
+这是一段区块示例内容，它拥有扩展属性。
 
+## 文字颜色、背景色、字体 ✅
 
-## 表格 {.main .shine #the-site lang=fr} ✅
+```markdown
+[color=red, bgcolor=yellow .nice]#赤色#
+
+[font=宋体]#我是有不一样的字体#
+```
+
+我有[color=red, bgcolor=yellow .nice .girl]#赤色#的文本和[color=blue]#蓝色#内容。
+
+我是有[font="思源宋体 CN"]#不一样的字体#,
+我有[font=阿里妈妈东方大楷]#阿里妈妈东方大楷#
+
+## 表格 ✅
 
 <pre>
 First Header  | Second Header
@@ -107,7 +144,7 @@ Content Cell  | Content Cell
 | Content Cell  | Content Cell  |
 </pre>
 
-单元格对齐
+单元格对齐->
 
 <pre>
 | 默认对齐   | 左对齐 | 中对齐 | 右对齐 |
@@ -116,27 +153,40 @@ Content Cell  | Content Cell
 | Content   | Content | Content | Content |
 </pre>
 
+{align=center .my-table}
 | 默认对齐   | 左对齐 | 中对齐 | 右对齐 |
 | ---       | :---  | :---: | ---:  |
 | Content   | Content | Content | Content |
 | Content   | Content | Content | Content |
 
 
-## 定义列表 （Definition Lists） 🔲
+
+## 定义列表 （Definition Lists） ✅
 
 <pre>
 Apple
+
 :   Pomaceous fruit of plants of the genus Malus in 
     the family Rosaceae.
 
 Orange
+
 :   The fruit of an evergreen tree of the genus Citrus.
 </pre>
+
+Apple
+
+:   Pomaceous fruit of plants of the genus Malus in 
+    the family Rosaceae.
+
+Orange
+
+:   The fruit of an evergreen tree of the genus Citrus.
 
 
 ## 脚注/引用 ✅
 
-`^`字符后面可以用字母与下划线组合，渲染时系统自动重新编号。
+`[^数字|字母中线下划线组合]`字符后面可以用数字标号，或字母与下划线、中线的组合，渲染时系统自动重新编号。
 
 <pre>
 That's some text with a footnote.[^1]
@@ -145,28 +195,11 @@ That's some text with a footnote.[^1]
       That's the second paragraph.
 </pre>
 
+That's some text with a footnote.[^1]
 
+[^1]: And that's the footnote.
+      That's the second paragraph.
 
-## 缩写词 🔲
-
-<pre>
-*[HTML]: Hyper Text Markup Language
-*[W3C]:  World Wide Web Consortium
-</pre>
-
-示例Markdown
-
-```markdown
-The HTML specification
-is maintained by the W3C.
-```
-
-渲染HTML结果
-
-```html
-The <abbr title="Hyper Text Markup Language">HTML</abbr> specification
-is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
-```
 
 ## 强调扩展
 
@@ -178,15 +211,15 @@ is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
 
 ~~删除线~~
 
-### 下划线 🔲
+### 下划线 ✅
 
 ```markdown
-__下划线__
+[ul]#下划线#
 ```
 
-__下划线__
+[ul]#下划线#
 
-### 上标 🔲
+### 上标 ✅
 
 ```markdown
 E=MC^2^
@@ -194,7 +227,7 @@ E=MC^2^
 
 E=MC^2^
 
-### 下标 🔲
+### 下标 ✅
 
 ```markdown
 H~2~O
@@ -215,7 +248,7 @@ H~2~O
 - [ ] Update the website
 - [ ] Contact the media
 
-## 高亮 🔲
+## 高亮 ✅
 
 ```markdown
 I need to highlight these ==very important words==.
@@ -229,19 +262,12 @@ HTML结果
 I need to highlight these <mark>very important words</mark>.
 ```
 
-## 区块属性 🔲
+## Table of content
+
+对于长篇大作，良好的目录索引（TOC）对阅读很有帮助，所以需要增加TOC的宏标记，在输出时自动替换。
 
 ```markdown
-{#notice .note lang="zh"}
-我是一个需要特别注意的段落。
-```
-
-## 文字颜色、背景色、字体 🔲
-
-```markdown
-[color=red, bgcolor=yellow]#赤色#
-
-[font=宋体]#我是有不一样的字体#
+[TOC]
 ```
 
 ## 特殊字符替换 ✅
@@ -250,16 +276,29 @@ I need to highlight these <mark>very important words</mark>.
 | => &#124;
 > => &gt;
 < => &lt;
+(C) © 版权
+(TM) ™ 商标
+(R) ® 注册商标
+-- —— 破折号
+... …​省略号
+-> → 右箭头
+<- ← 左箭头
+=> ⇒ 右双箭头
+<= ⇐ 左双箭头
+
 ```
 
-## 常用符号
+## 常用符号 ✅
 
 1. [HTML特殊符号](https://chaooo.github.io/unicode_css3_content/) [^php-markdown-extra] ✅
-2. [emoji表情符号](https://gist.github.com/rxaviers/7360908) 🔲
+2. [emoji表情符号](https://gist.github.com/rxaviers/7360908) ✅
 
+:smile: :muscle:
 
 ## 参考
 
 [^markdown-syntax]: <https://daringfireball.net/projects/markdown/syntax>
 
 [^php-markdown-extra]: <https://michelf.ca/projects/php-markdown/extra/>
+
+[^gfm]: <https://github.github.com/gfm/>
