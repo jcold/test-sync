@@ -10,7 +10,7 @@ date: 2023-09-10 11:13
 
 ## 更新于：2023-09-12 19:57
 
-比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒博客](https://site.daobox.cn)，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
+比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒发布](https://publish.daobox.cn)，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
 
 ---
 
