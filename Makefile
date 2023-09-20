@@ -6,15 +6,15 @@ tag:
 	fi
 
 gen_l:
-	DAOBOX_LOG=info,daobox_site=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve \
+	DAOBOX_LOG=info,daobox_publish=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish serve \
 		--dist-dir ./dist --export
 
 preview:
-	DAOBOX_LOG=info,daobox_site=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve
+	DAOBOX_LOG=info,daobox_publish=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish serve
 
 web:
-	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site web --work-dir dist
+	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish web --work-dir dist
  
 gen:
-	daobox-site serve --export
+	daobox-publish serve --export
 
