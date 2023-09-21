@@ -1,6 +1,7 @@
 ```yaml
 date: 2023-09-10 11:13
 slug: daobox-extend-markdown
+weight: 100
 ```
 
 **本页目录**
