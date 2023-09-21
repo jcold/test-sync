@@ -1,7 +1,7 @@
-```yaml
+---
 title: Ubuntu/Linux 三板斧
 date: 2023-08-31 11:36
-```
+---
 
 记录我的Ubuntu三板斧技能
 
