@@ -103,12 +103,37 @@ console.log('代码块+语法高亮')
 {{daobox::toc()}}
 ```
 
+可选参数：
+
+* `level` 搜索的标题级别，默认 `level=3`
+
+```markdown
+{{daobox::toc(level=5)}}
+```
+
+
 ### 包含外部文件
 
-渲染时将指定文件内容包含进来。
+渲染时将指定文件内容包含进来。仅允许常见的[ul]#**纯文本**#文件，常见扩展名为md, txt, csv, js等程序源文件。
 
 ```markdown
 {{daobox::include(file="_xx.md")}}
+```
+
+可选参数：
+
+* `as` 输出格式。取值范围：
+    1. `plain`(默认值)，渲染时原样输出
+    1. `table` 尝试解析为表格
+    1. `code` 代码
+* `lang` 编程语言，仅 `as="code"` 时有效。
+
+```markdown
+{{daobox::include(file="_xx.csv", as="table")}}
+```
+
+```markdown
+{{daobox::include(file="_xx.js", as="code", lang="js")}}
 ```
 
 ## 内部链接 {#inner-link}
@@ -123,7 +148,7 @@ console.log('代码块+语法高亮')
 [[网页路径/文件名?dir="目录"]]
 ```
 
-## 页内锚点 {#page-anchor}
+## 页内锚点 ✅ {#page-anchor}
 
 适用于页面内部不同位置之间的跳转。目前仅适用于标题:exclamation:。
 
