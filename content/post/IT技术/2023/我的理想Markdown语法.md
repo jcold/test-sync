@@ -27,10 +27,10 @@ weight: 100
 
 用了这么长时间文本编辑器，总对格式不能自由掌控感到不快，直到使用了Markdown。Markdown是近年来较为流行的文本标记语言，简单易用是它的核心特点，因为简单，所以格式不是那么丰富，在某些场景下无法满足需求，若是退回，则又回到开始，纠结使用哪个编辑器。索性今天整理下Markdown语法诉求，看看能否对其扩展，以满足日常需求？
 
-# 语法来源 ✅
+# 基础语法 ✅
 
 1. 基于[Markdown标准语法](https://daringfireball.net/projects/markdown/syntax)[^markdown-syntax]。部分格式有几种表达方式，这里仅罗列其一种。
-2. 补充[Github Markdown](https://github.github.com/gfm/)扩展语法[^gfm]。
+2. 补充[Github Markdown](https://github.github.com/gfm/)[^gfm]扩展语法。
 
 <pre>
 
@@ -86,7 +86,7 @@ console.log('代码块+语法高亮')
 </pre>
 
 
-# 标准语法扩展
+# 语法扩展
 
 
 ## 宏 {#daobox-macro}
