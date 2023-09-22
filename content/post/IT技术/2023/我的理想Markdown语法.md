@@ -9,11 +9,7 @@ weight: 100
 
 [TOC]
 
-# 日志更新
-
-## 2023-09-12
-
-比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒发布]，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
+# 更新日志
 
 ## 2023-09-22
 
@@ -22,6 +18,10 @@ weight: 100
 * [宏](#daobox-macro)`{{daobox::include()}}`包含
 * [内部链接](#inner-link)
 * [页内锚点](#page-anchor)
+
+## 2023-09-12
+
+比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒发布]，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
 
 ---
 
