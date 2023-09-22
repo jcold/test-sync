@@ -1,5 +1,6 @@
 ---
 date: 2023-09-10 11:13
+update_time: 2023-09-22 12:25
 slug: daobox-extend-markdown
 weight: 100
 ---
@@ -8,11 +9,19 @@ weight: 100
 
 [TOC]
 
-# 补充更新
+# 日志更新
 
-## 更新于：2023-09-12 19:57
+## 2023-09-12
 
-比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒发布](https://publish.daobox.cn)，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
+比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒发布]，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
+
+## 2023-09-22
+
+**新增**
+
+* [宏](#daobox-macro)`{{daobox::include()}}`包含
+* [内部链接](#inner-link)
+* [页内锚点](#page-anchor)
 
 ---
 
@@ -78,6 +87,48 @@ console.log('代码块+语法高亮')
 
 
 # 标准语法扩展
+
+
+## 宏 {#daobox-macro}
+
+### TOC (Table of content) ✅
+
+对于长篇大作，良好的目录索引（TOC）对阅读很有帮助，所以需要增加TOC的宏标记，渲染时自动替换。效果见本页开始。
+
+```markdown
+[TOC]
+```
+
+```markdown
+{{daobox::toc()}}
+```
+
+### 包含外部文件
+
+渲染时将指定文件内容包含进来。
+
+```markdown
+{{daobox::include(file="_xx.md")}}
+```
+
+## 内部链接 {#inner-link}
+
+适用于项目内的文件跳转。
+
+```markdown
+[[文件名]]
+
+[[文件名?dir="目录"]]
+
+[[网页路径/文件名?dir="目录"]]
+```
+
+## 页内锚点 {#page-anchor}
+
+适用于页面内部不同位置之间的跳转。目前仅适用于标题:exclamation:。
+
+标题增加`id`属性后会自动生成锚点，如果未指定`id`属性，默认使用`HA-`加上标题内容地址化[^slugify]生成锚点，可在链接中使用`#id`实现页内锚点跳转。
+
 
 ## 自动转换链接 ✅
 
@@ -205,7 +256,7 @@ That's some text with a footnote.[^1]
       That's the second paragraph.
 
 
-## 强调扩展
+## 强调
 
 ### 删除线 ✅
 
@@ -266,14 +317,6 @@ HTML结果
 I need to highlight these <mark>very important words</mark>.
 ```
 
-## Table of content ✅
-
-对于长篇大作，良好的目录索引（TOC）对阅读很有帮助，所以需要增加TOC的宏标记，在输出时自动替换。使用效果见本页开始。
-
-```markdown
-[TOC]
-```
-
 ## 特殊字符替换 ✅
 
 ```markdown
@@ -299,7 +342,7 @@ I need to highlight these <mark>very important words</mark>.
 
 :smile: :muscle:
 
-查找[表情]录入(https://github-emoji-picker.rickstaa.dev/)
+查找[表情](https://github-emoji-picker.rickstaa.dev/)录入
 
 ## 参考
 
@@ -308,3 +351,7 @@ I need to highlight these <mark>very important words</mark>.
 [^php-markdown-extra]: <https://michelf.ca/projects/php-markdown/extra/>
 
 [^gfm]: <https://github.github.com/gfm/>
+
+[道盒发布]: https://publish.daobox.cn
+
+[^slugify]: 通过对文本转换，从而生成有效链接地址。英文字母数字保持原样，空格替换为`-`，中文每个字符转换拼音后，使用`-`连接。==注:exclamation:==：字母+中文的连接处没有连字符`-`，如果需要请在中间添加英文空格。
