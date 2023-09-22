@@ -199,7 +199,7 @@ Content Cell  | Content Cell
 | Content Cell  | Content Cell  |
 </pre>
 
-单元格对齐->
+单元格对齐
 
 <pre>
 | 默认对齐   | 左对齐 | 中对齐 | 右对齐 |
@@ -337,18 +337,14 @@ I need to highlight these <mark>very important words</mark>.
 
 ## 常用符号 ✅
 
-1. [HTML特殊符号](https://chaooo.github.io/unicode_css3_content/) [^php-markdown-extra] ✅
+1. [HTML特殊符号](https://chaooo.github.io/unicode_css3_content/) ✅
 2. [emoji表情符号](https://gist.github.com/rxaviers/7360908) ✅
 
-:smile: :muscle:
-
-查找[表情](https://github-emoji-picker.rickstaa.dev/)录入
+:point_right:查找emoji[表情](https://github-emoji-picker.rickstaa.dev/) :smile: :muscle: 。
 
 ## 参考
 
 [^markdown-syntax]: <https://daringfireball.net/projects/markdown/syntax>
-
-[^php-markdown-extra]: <https://michelf.ca/projects/php-markdown/extra/>
 
 [^gfm]: <https://github.github.com/gfm/>
 
