@@ -175,29 +175,28 @@ hello <https://www.daobox.cn>{target=_blank color=red} world
 ```markdown
 带有扩展属性的[道盒](https://www.daobox.cn){color=orangered}链接。
 
-![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){style="border-radius: 1em;"}
+![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){corner=1em}
 ```
 
 带有扩展属性的[道盒](https://www.daobox.cn){color=orangered}链接。
 
-![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){style="border-radius: 1em;"}
+![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){corner=1em}
 
 
 ## 段落属性 ✅
 
 ```markdown
-{bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em coner=0.5em}
+{bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em corner=0.5em}
 这是一段区块示例内容，它拥有扩展属性。
 ```
 
-{bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em coner=0.5em}
+{bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em corner=0.5em}
 这是一段区块示例内容，它拥有扩展属性。
 
 ## 文字颜色、背景色、字体 ✅
 
 ```markdown
 [color=red, bgcolor=yellow .nice]#赤色#
-
 [font=宋体]#我是有不一样的字体#
 ```
 
