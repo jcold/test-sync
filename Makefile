@@ -10,7 +10,7 @@ gen_l:
 		--dist-dir ./dist --export
 
 preview:
-	DAOBOX_LOG=info,daobox_publish=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish serve
+	DAOBOX_LOG=info,daobox_publish=trace,daobox_markdown=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish serve
 
 web:
 	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish web --work-dir dist
