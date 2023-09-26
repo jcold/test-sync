@@ -124,7 +124,8 @@ console.log('代码块+语法高亮')
     1. `code` 代码
     1. `md` or `markdown`, 以Markdown格式解析
 * `lang` 编程语言，仅 `as="code"` 时有效。
-* `header` 是否存在表头，仅 `as="table"` 时有效。
+* `header` 第一行是否为表头，仅 `as="table"` 时有效。
+* `merge_cell` 是否自动合并单元格。值与单元格内容相同则合并，合并顺序为先行后列。例如：合并所有空内容的单元格，可以增加参数 `merge_cell=""`。仅 `as="table"` 时有效。
 
 ```markdown
 {{daobox::include(file="_include_test.inc.md", as="md")}}
@@ -132,9 +133,10 @@ console.log('代码块+语法高亮')
 {{daobox::include(file="_include_test.inc.md", as="md")}}
 
 ```markdown
-{{daobox::include(file="demo.csv", as="table", header=true)}}
+所有*号内容的单元格自动合并。
+{{daobox::include(file="demo.csv", as="table", header=true, merge_cell="*")}}
 ```
-{{daobox::include(file="demo.csv", as="table", header=true)}}
+{{daobox::include(file="demo.csv", as="table", header=true, merge_cell="*")}}
 
 
 ```markdown

@@ -930,52 +930,42 @@ body {
     line-height: 1.7142857;
   }
 
-.yb-content2 thead {
-    color: #111827;
-    font-weight: 600;
-    border-bottom-width: 1px;
-    border-bottom-color: #d1d5db;
+
+.yb-content2  th {
+    /* vertical-align: bottom; */
+    padding: 0.5em;
+    text-align: center;
   }
 
-.yb-content2 thead th {
-    vertical-align: bottom;
-    padding-right: 0.5714286em;
-    padding-bottom: 0.5714286em;
-    padding-left: 0.5714286em;
-  }
-
-.yb-content2 tbody tr {
-    border-bottom-width: 1px;
+.yb-content2 table tr {
+    /* border-bottom-width: 1px; */
     border-bottom-color: #e5e7eb;
   }
 
-.yb-content2 tbody tr:last-child {
+/* .yb-content2 table tr:last-child {
     border-bottom-width: 0;
+  } */
+
+.yb-content2 table td {
+    /* vertical-align: top; */
+    padding: 0.5em;
   }
 
-.yb-content2 tbody td {
-    vertical-align: top;
-    padding-top: 0.5714286em;
-    padding-right: 0.5714286em;
-    padding-bottom: 0.5714286em;
-    padding-left: 0.5714286em;
-  }
-
-.yb-content2 thead th:first-child {
+/* .yb-content2 thead th:first-child {
     padding-left: 0;
-  }
+  } */
 
-.yb-content2 thead th:last-child {
+/* .yb-content2 thead th:last-child {
     padding-right: 0;
   }
 
 .yb-content2 tbody td:first-child {
     padding-left: 0;
-  }
+  } */
 
-.yb-content2 tbody td:last-child {
+/* .yb-content2 tbody td:last-child {
     padding-right: 0;
-  }
+  } */
 
 .yb-content2 p {
     margin-top: 1.5em;
