@@ -127,17 +127,30 @@ console.log('代码块+语法高亮')
 * `header` 第一行是否为表头，仅 `as="table"` 时有效。
 * `merge_cell` 是否自动合并单元格。值与单元格内容相同则合并，合并顺序为先行后列。例如：合并所有空内容的单元格，可以增加参数 `merge_cell=""`。仅 `as="table"` 时有效。
 
+**包含Markdown示例：**
+
 ```markdown
 {{daobox::include(file="_include_test.inc.md", as="md")}}
 ```
 {{daobox::include(file="_include_test.inc.md", as="md")}}
 
+---
+
+**包含表格示例：**
+
+所有*号内容的单元格自动合并，并且使用扩展属性。
+
 ```markdown
-所有*号内容的单元格自动合并。
+{align=center}
 {{daobox::include(file="demo.csv", as="table", header=true, merge_cell="*")}}
 ```
+
+{align=center}
 {{daobox::include(file="demo.csv", as="table", header=true, merge_cell="*")}}
 
+---
+
+**包含代码示例：**
 
 ```markdown
 {{daobox::include(file="_xx.js", as="code", lang="js")}}
