@@ -116,21 +116,26 @@ console.log('代码块+语法高亮')
 
 渲染时将指定文件内容包含进来。仅允许常见的[ul]#**纯文本**#文件，常见扩展名为md, txt, csv, js等程序源文件。
 
-```markdown
-{{daobox::include(file="_xx.md")}}
-```
-
 可选参数：
 
 * `as` 输出格式。取值范围：
     1. `plain`(默认值)，渲染时原样输出
     1. `table` 尝试解析为表格
     1. `code` 代码
+    1. `md` or `markdown`, 以Markdown格式解析
 * `lang` 编程语言，仅 `as="code"` 时有效。
+* `header` 是否存在表头，仅 `as="table"` 时有效。
 
 ```markdown
-{{daobox::include(file="_xx.csv", as="table")}}
+{{daobox::include(file="_include_test.inc.md", as="md")}}
 ```
+{{daobox::include(file="_include_test.inc.md", as="md")}}
+
+```markdown
+{{daobox::include(file="demo.csv", as="table", header=true)}}
+```
+{{daobox::include(file="demo.csv", as="table", header=true)}}
+
 
 ```markdown
 {{daobox::include(file="_xx.js", as="code", lang="js")}}
@@ -152,7 +157,7 @@ console.log('代码块+语法高亮')
 2. 以 `./` (当前文件目录) 或 `../` (当前文件的上一级目录) 表示以当前文件为基准的相对定位。
 3. 除上述外，均以主题为后缀，搜索所有内容文件。
 
-示例：[[sub/Cargo添加git+ssh依赖]]
+示例：[[Cargo添加git+ssh依赖]]
 
 ## 页内锚点 ✅ {#page-anchor}
 
