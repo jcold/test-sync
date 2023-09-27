@@ -97,22 +97,23 @@ console.log('代码块+语法高亮')
 
 ```markdown
 [TOC]
-```
 
-```markdown
 {{daobox::toc()}}
+
+{{daobox::toc(level=1)}}
 ```
 
 可选参数：
 
 * `level` 搜索的标题级别，默认 `level=3`
 
-```markdown
-{{daobox::toc(level=5)}}
-```
+**Toc 示例**
 
+{{daobox::toc(level=1)}}
 
-### 包含外部文件
+---
+
+### 包含外部文件 ✅
 
 渲染时将指定文件内容包含进来。仅允许常见的[ul]#**纯文本**#文件，常见扩展名为md, txt, csv, js等程序源文件。
 
