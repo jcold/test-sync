@@ -1,5 +1,10 @@
 {% extends "_daobox/layout.html" %}
 
+
+{% block page_title -%}
+{% set doc = post_meta(id=__qs | get(key="id", default=""), path=__qs | get(key="path", default="")) %}
+{{- doc.title}} | {% endblock %}
+
 {% block body %}
 {% set doc = post_detail(id=__qs | get(key="id", default=""), path=__qs | get(key="path", default="")) %}
 <div class="block-container space-y-8">

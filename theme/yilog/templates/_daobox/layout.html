@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>{{__cfg.site.name}}</title>
+    <title>{% block page_title %}{% endblock page_title %}{{__cfg.site.name}}</title>
     <meta name="description" content="{{__cfg.site.description | default(value="")}}" />
     <meta name="keywords" content="{{__cfg.site.keywords | default(value="")}}" />
     {% block meta %}
