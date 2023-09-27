@@ -115,7 +115,7 @@ console.log('代码块+语法高亮')
 
 ### 包含外部文件 ✅
 
-渲染时将指定文件内容包含进来。仅允许常见的[ul]#**纯文本**#文件，常见扩展名为md, txt, csv, js等程序源文件。
+渲染时将指定文件内容包含进来。仅允许常见的{ul}#**纯文本**#文件，常见扩展名为md, txt, csv, js等程序源文件。
 
 可选参数：
 
@@ -223,14 +223,14 @@ hello <https://www.daobox.cn>{target=_blank color=red} world
 ## 文字颜色、背景色、字体 ✅
 
 ```markdown
-[color=red, bgcolor=yellow .nice]#赤色#
-[font=宋体]#我是有不一样的字体#
+{color=red, bgcolor=yellow .nice}#赤色#
+{font=宋体}#我是有不一样的字体#
 ```
 
-我有[color=red, bgcolor=yellow .nice .girl]#赤色#的文本和[color=blue]#蓝色#内容。
+我有{color=red, bgcolor=yellow .nice .girl}#赤色#的文本和{color=blue}#蓝色#内容。
 
-我是有[font="思源宋体 CN"]#不一样的字体#,
-我有[font=阿里妈妈东方大楷]#阿里妈妈东方大楷#
+我的字体是{font="思源宋体 CN"}#思源宋体 CN#,
+我的字体是{font="阿里妈妈东方大楷"}#阿里妈妈东方大楷#,
 
 ## 表格 ✅
 
@@ -320,10 +320,10 @@ That's some text with a footnote.[^1]
 ### 下划线 ✅
 
 ```markdown
-[ul]#下划线#
+{ul}#下划线#
 ```
 
-[ul]#下划线#
+{ul}#下划线#
 
 ### 上标 ✅
 
