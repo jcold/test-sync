@@ -1,5 +1,6 @@
 ---
-title: Hello Again Dayu
+title: Hello Dayu Again
+slug: hello-dayu
 date: 2021-11-10 16:24
 update_time: 2023-09-28 15:00
 ---
