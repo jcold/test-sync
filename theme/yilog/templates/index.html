@@ -12,7 +12,7 @@
     {% set start = (page_no - 1) * 5 %}
     {% set end = start + 5 %}
     {% set items = posts(dir="/", recursive=true) %}
-    {% set page_count = script("Math.ceil(val)", val = items | length / 5 ) %}
+    {% set page_count = script(content="Math.ceil(args.val)", val = items | length / 5 ) %}
 
     {% if page_no < 2 and post_exist(path="/_page/home.md") %}
         {% set doc = post_detail(path="/_page/home.md") %}
