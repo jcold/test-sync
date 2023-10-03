@@ -1,15 +1,22 @@
 ---
 date: 2023-09-10 11:13
-update_time: 2023-09-22 12:25
+update_time: 2023-10-03 10:57
 slug: daobox-extend-markdown
 weight: 100
 ---
+
+{.notice tc bgcolor="#FAC03D"}
+*停止更新！请前往[道盒笔记]获得支持。*
 
 **本页目录**
 
 [TOC]
 
 # 更新日志
+
+## 2023-10-03
+
+本格式规范迁移至[道盒笔记]实现，希望能为有相关痛点的你提供帮助。至此不再更新，如有意见建议，欢迎前往[道盒笔记]讨论。
 
 ## 2023-09-22
 
@@ -406,3 +413,6 @@ I need to highlight these <mark>very important words</mark>.
 [道盒发布]: https://publish.daobox.cn
 
 [^slugify]: 通过对文本转换，从而生成有效链接地址。英文字母数字保持原样，空格替换为`-`，中文每个字符转换拼音后，使用`-`连接。==注:exclamation:==：字母+中文的连接处没有连字符`-`，如果需要请在中间添加英文空格。
+
+
+[道盒笔记]: https://note.daobox.cn
