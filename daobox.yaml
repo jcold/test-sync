@@ -6,9 +6,9 @@ cfg:
     description: 大余的修行日志。
     keywords: 大余, 道盒, dayu
     beian: 
-uri:
-  - dir: /
-    path: /posts/2023/{{slug}}.html
+directory:
+  - path: /
+    url: /posts/2023/{{slug}}.html
 context:
   - location:
       - /posts/

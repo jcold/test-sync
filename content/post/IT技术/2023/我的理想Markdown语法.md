@@ -96,7 +96,8 @@ console.log('代码块+语法高亮')
 # 语法扩展
 
 
-## 宏 {#daobox-macro}
+{#daobox-macro}
+## 宏 
 
 ### TOC (Table of content) ✅
 
@@ -135,9 +136,9 @@ console.log('代码块+语法高亮')
     1. `table` 尝试解析为表格
     1. `code` 代码
     1. `md` or `markdown`, 以Markdown格式解析
-* `lang` 编程语言，仅 `as="code"` 时有效。
-* `header` 第一行是否为表头，仅 `as="table"` 时有效。
-* `merge_cell` 是否自动合并单元格。值与单元格内容相同则合并，合并顺序为先行后列。例如：合并所有空内容的单元格，可以增加参数 `merge_cell=""`。仅 `as="table"` 时有效。
+* `code_lang` 编程语言，仅 `as="code"` 时有效。
+* `table_header` 第一行是否为表头，仅 `as="table"` 时有效。
+* `table_merge` 是否自动合并单元格。值与单元格内容相同则合并，合并顺序为先行后列。例如：合并所有空内容的单元格，可以增加参数 `table_merge=""`。仅 `as="table"` 时有效。
 
 **包含Markdown示例：**
 
@@ -154,21 +155,22 @@ console.log('代码块+语法高亮')
 
 ```markdown
 {align=center}
-{{daobox::include(file="demo.csv", as="table", header=true, merge_cell="*")}}
+{{daobox::include(file="demo.csv", as="table", table_header=true, table_merge="*")}}
 ```
 
 {align=center}
-{{daobox::include(file="demo.csv", as="table", header=true, merge_cell="*")}}
+{{daobox::include(file="demo.csv", as="table", table_header=true, table_merge="*")}}
 
 ---
 
 **包含代码示例：**
 
 ```markdown
-{{daobox::include(file="_xx.js", as="code", lang="js")}}
+{{daobox::include(file="_xx.js", as="code", code_lang="js")}}
 ```
 
-## 内部链接 ✅ {#inner-link}
+{#inner-link}
+## 内部链接 ✅ 
 
 适用于项目内的文件跳转。支持非HTML页面链接，如PDF文档等，该文件在输出时自动复制到静态资源目录。
 
@@ -186,7 +188,8 @@ console.log('代码块+语法高亮')
 
 示例：[[永不消失的独立站]]
 
-## 页内锚点 ✅ {#page-anchor}
+{#page-anchor}
+## 页内锚点 ✅ 
 
 适用于页面内部不同位置之间的跳转。目前仅适用于标题:exclamation:。
 
@@ -202,7 +205,8 @@ console.log('代码块+语法高亮')
 hello <https://www.daobox.cn>{target=_blank color=red} world
 
 
-## 标题、链接、图片扩展属性 ✅ {.main .shine #the-site lang=zh}
+{.main .shine #the-site lang=zh}
+## 标题、链接、图片扩展属性 ✅ 
 
 可以对下面块增加属性，属性支持CSS样式名，ID，和其他自定义属性
 
