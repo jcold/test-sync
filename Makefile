@@ -5,12 +5,6 @@ tag:
 		git push -f github $(TAG); \
 	fi
 
-gen_l:
-	DAOBOX_LOG=info,daobox_publish=trace ~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish serve \
-		--theme yilog \
-		--dist-dir ./dist \
-		--export
-
 preview:
 	DAOBOX_LOG=info,daobox_publish=trace,daobox_markdown=trace \
 		~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish \
@@ -20,7 +14,7 @@ preview:
 web:
 	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish web --work-dir dist
  
-gen:
+dist:
 	daobox-publish serve \
 		--theme yilog \
 		--export
