@@ -19,7 +19,7 @@ fswatch -0 ~/ybf5/src/assets/css/view.scss | xargs -0 -n1  ~/bin/sass {} ~/ybf5/
 ```bash
 # 先查找下看看是不是想要的？
 # 括号内 -o 连接 表示多个 or 操作
-# -prune 表示命中后忽略
+# -prune 表示命中后停止深入搜索子目录
 find ~/ -type d \( -name "target" -o -name "node_modules" -o -name ".pnpm" -o -name ".vscode" -o -name ".nvm" -o -name ".cargo" \) -prune -print
 
 # 将命中的目标添加到TimeMachine
