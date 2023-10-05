@@ -1,5 +1,6 @@
 ---
 date: 2023-09-09 16:08
+slug: docker-tips
 ---
 
 ### 搭建OpenVPN服务

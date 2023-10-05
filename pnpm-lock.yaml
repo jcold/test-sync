@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   daobox-publish:
-    specifier: ^0.8.0
-    version: 0.8.0
+    specifier: ^0.8.1
+    version: 0.8.1
 
 packages:
 
@@ -30,8 +30,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /daobox-publish@0.8.0:
-    resolution: {integrity: sha512-qTnKhui+IjrNdKP4U+YJs+tV3oWf17fa1pLTxh6PYha0jfJmkI/VAS7t+ZVaqgmtm0xOph/ox0HFV6+asAJCdA==}
+  /daobox-publish@0.8.1:
+    resolution: {integrity: sha512-MEw1vh5vzy0+5TWZu7IBIcRkFdSA3oJWWzAnNGTiuzYsNhLADysRuMaPNL5gB38erNq3Ho3lo1YA+y9BMwrDvA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true

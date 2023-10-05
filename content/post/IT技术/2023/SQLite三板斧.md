@@ -1,5 +1,6 @@
 ---
 date: 2023-09-09 22:53
+slug: sqlite-tips
 ---
 
 ```bash

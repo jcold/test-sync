@@ -1,5 +1,6 @@
 ---
 date: 2023-09-09 18:20
+slug: ubuntu-server-init
 ---
 
 ```bash

@@ -1,5 +1,6 @@
 ---
 date: 2023-09-09 18:05
+slug: android-tips
 ---
 
 ## 对apk包签名

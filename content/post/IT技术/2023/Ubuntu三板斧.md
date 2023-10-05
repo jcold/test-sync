@@ -1,6 +1,7 @@
 ---
 title: Ubuntu/Linux 三板斧
 date: 2023-08-31 11:36
+slug: ubuntu-tips
 ---
 
 记录我的Ubuntu三板斧技能

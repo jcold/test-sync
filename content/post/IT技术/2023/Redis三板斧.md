@@ -1,6 +1,7 @@
 ---
 date: 2023-08-31 17:40
 draft: false
+slug: redis-tips
 ---
 
 ### 执行Lua脚本

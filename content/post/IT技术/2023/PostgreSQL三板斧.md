@@ -1,5 +1,6 @@
 ---
 date: 2023-08-31 11:58
+slug: postgresql-tips
 ---
 
 ### 备份与恢复数据
