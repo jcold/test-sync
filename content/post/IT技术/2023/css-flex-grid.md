@@ -6,13 +6,18 @@ tags:
     - css
 ---
 
+**本页目录**
 
-## Grid 布局学习
+[TOC]
+
+---
+
+# Grid 布局学习
 
 请移步至 [CSS Grid 网格布局教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)。
 
 
-## :question: CSS Grid 之列宽自适应：auto-fill vs auto-fit，到底什么区别
+# :question: CSS Grid 之列宽自适应：auto-fill vs auto-fit，到底什么区别
 
 只有行的宽度大到能够容纳额外的列时，两者的区别才会体现出来。
 
@@ -29,7 +34,7 @@ tags:
 
 
 
-## :question: Flex或Grid布局时容器被撑大
+# :question: Flex或Grid布局时容器被撑大
 
 ==使用`min-width:0;`解决。==
 
