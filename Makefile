@@ -1,4 +1,4 @@
-.PHONY: tag
+.PHONY: tag dist
 tag:
 	@if [ "$(TAG)" != "" ]; then \
 		git tag -f $(TAG); \

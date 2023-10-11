@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "daobox-publish": "^0.8.3"
+    "daobox-publish": "^0.8.4"
   }
 }
