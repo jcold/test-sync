@@ -1,12 +1,17 @@
 ---
 title: Ubuntu/Linux 三板斧
 date: 2023-08-31 11:36
+update_time: 2023-10-11 12:28
 slug: ubuntu-tips
 ---
 
+*本页目录*
+
+[TOC]
+
 记录我的Ubuntu三板斧技能
 
-### 为所有用户增加环境变量
+# 为所有用户增加环境变量
 
 将变量键值对写入 `/etc/environment`。查看如下：
 
@@ -16,7 +21,7 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 LOCAL_IP="10.0.4.11"
 ```
 
-### 永久更改 Host Name
+# 永久更改 Host Name
 
 ```bash
 # 写入新的HostName到文件 /etc/hostname
@@ -46,7 +51,7 @@ Operating System: Ubuntu 22.04 LTS
 Pretty hostname 保存在：`/etc/machine-info`。某些情况下需要引用该HostName，还需要在 `/etc/hosts` 文件中增加该地址解析。
 
 
-### ssh秘钥与git连接
+# ssh秘钥与git连接
 
 ```bash
 # 测试私钥是否有权限连接服务器
@@ -61,7 +66,7 @@ ssh-keygen -t ed25519 -C "devops@liveio.cn" -m PEM
 ```
 
 
-### 使用逻辑卷管理硬盘分区，加装硬盘后系统扩容
+# 使用逻辑卷管理硬盘分区，加装硬盘后系统扩容
 
 查看当前逻辑分区信息：
 
@@ -126,7 +131,7 @@ sdc                         8:32   0 953.9G  0 disk
 Ref: https://blog.yqxpro.com/2021/10/31/%E9%80%9A%E8%BF%87LVM%E7%BB%99Ubuntu%E6%B7%BB%E5%8A%A0%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4/
 
 
-### ssh与socks5代理
+# ssh与socks5代理
 
 ```bash
 # 本地拨入远程主机，并打开一个Socks5代理
@@ -140,10 +145,21 @@ ssh  -p 11022 -D 127.0.0.1:1337 -N root@y4.dayu.me
 * `N`: 不执行命令，仅作端口转发
 
 
-### ssh反向代理
+# ssh反向代理
 
 ```bash
 # 将本地的9080端口反向拨入到远程主机y4.dayu.me的5001端口，远程主机的ssh端口为11022。
 # 最后的作用是：y4.dayu.me:5001  -> localhost:9080
 ssh -CNR 5001:localhost:9080 root@y4.dayu.me -p 11022
 ```
+
+
+# 找回ssh公钥
+
+```bash
+ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+```
+
+**ref**:
+
+- [如何找回ssh公钥 - 简书](https://www.jianshu.com/p/84645538b639)
