@@ -163,3 +163,46 @@ ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
 **ref**:
 
 - [如何找回ssh公钥 - 简书](https://www.jianshu.com/p/84645538b639)
+
+
+# 高效压缩工具之xz
+
+高压缩率的工具，它使用 LZMA2 压缩算法，生成的压缩文件比传统使用的 gzip、bzip2 生成的压缩文件更小，
+详情见[官网](https://tukaani.org/xz/)。
+
+```bash
+xz [选项] [参数]
+```
+
+主要参数说明：
+
+```bash
+-z --compress  # 强制压缩
+-d --decompress # 解压缩
+-t --test # 测试压缩文件的完整性
+-k --keep # 压缩或解压时保持源文件不被删除
+-l --list # 列出有关.xz文件的信息
+-0~9 # 指定压缩率，默认为6;
+-h --help # 显示这个简洁的帮助并退出
+-H --long-help # 显示更多帮助（还列出了高级选项）
+-V --version # 显示版本号并退出
+```
+
+eg: [^eg]
+
+[^eg]: [你能分清e.g.和i.e.吗？ - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2005/09/egie.html)
+
+
+```bash
+# xz压缩
+xz nohup.log
+
+# 解压使用-d参数，如果保留源文件可以加-k
+xz -dk nohup.log.xz 
+
+# 参数 -l 显示 .xz 文件的压缩率、数据完整性验证方式等基本信息
+xz -l nohup.log.xz 
+
+# xzcat对已压缩日志直接查看并过滤，或者 xzgrep 直接过滤
+xzcat nohup.log.xz | grep "18:29"
+```
