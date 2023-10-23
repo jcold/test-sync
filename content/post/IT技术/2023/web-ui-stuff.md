@@ -17,10 +17,10 @@ weight: 10
 
 ## CSS换皮肤 / 深色模式
 
-通用的方法，就是less、sass、post-css，把颜色抽离出变量。然后打包输出不同的样式，或在线切换。
+**换皮肤**通用的方法，就是less、sass、post-css，把颜色抽离出变量。然后打包输出不同的样式，或在线切换。
 
-[window.matchMedia](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/matchMedia) 方法可以用来查询 指定的媒体查询字符串解析后的结果。
-结合 CSS 变量和 matchMedia 的查询结果，设置对应的 CSS 主题颜色。该方法更灵活，可以单独抽离主题色进行适配。
+**深色模式**通过[window.matchMedia](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/matchMedia) 方法，实现媒体查询，解析后的结果再结合 CSS 变量，设置对应的 CSS 主题颜色。
+该方法更灵活，可以单独抽离主题色进行适配。
 
 CSS 变量的作用域与 CSS 的"层叠"规则一致，优先级最高的声明生效。所以当 `body` 上存在 `dark` 类名时，
 `:root .dark` 会生效，否则 `:root` 生效。
