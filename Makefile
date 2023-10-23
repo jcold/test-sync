@@ -5,7 +5,7 @@ tag:
 		git push -f github $(TAG); \
 	fi
 
-preview:
+work:
 	DAOBOX_LOG=info,daobox_publish=trace,daobox_markdown=trace \
 		~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish \
 		serve \

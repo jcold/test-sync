@@ -1,6 +1,6 @@
 ---
 date: 2023-09-09 16:08
-update_time: 2023-10-11 12:37
+update_time: 2023-10-22 20:19
 slug: docker-tips
 ---
 
@@ -95,3 +95,10 @@ docker import postgres-export.tar postgres:latest
 ref: 
 
 - [docker save与docker export的区别 - jingsam](https://jingsam.github.io/2017/08/26/docker-save-and-docker-export.html)
+
+
+# 删除所有停止的容器
+
+```bash
+docker ps -a -q -f status=exited | xargs docker rm
+```

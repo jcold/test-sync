@@ -1,9 +1,27 @@
 ---
 date: 2023-08-31 11:58
 slug: postgresql-tips
+update_time: 2023-10-23 14:02
 ---
 
-### 备份与恢复数据
+*本页目录*
+
+[TOC]
+
+## 查看相关目录
+
+```sql
+-- 配置文件位置
+show config_file;
+
+-- 数据目录。如果配置项使用相对路径，则基于此数据目录。
+show data_directory;
+
+-- 日志目录
+show log_directory;
+```
+
+## 备份与恢复数据
 
 注意：以下命令演示基于数据库部署在Docker容器中。
 
@@ -33,7 +51,7 @@ docker exec -ti devops-postgres-1 psql -d tehaochi -f /root/tehaochi.sql
 ```
 
 
-### 控制指令
+## 控制指令
 
 ```bash
 # 连接并进入Sql交互模式
@@ -63,7 +81,7 @@ psql
 ```
 
 
-### 常用运维SQL
+## 常用运维SQL
 ```sql
 -- 查看数据库启动时长
 SELECT date_trunc('second', current_timestamp - pg_postmaster_start_time()) as uptime;
@@ -84,7 +102,7 @@ ALTER DATABASE db RENAME TO newdb;
 ```
 
 
-### 用户与权限
+## 用户与权限
 
 ```sql
 -- 当前用户
@@ -116,7 +134,7 @@ SELECT pg_terminate_backend(pg_stat_activity.pid)
     WHERE pg_stat_activity.usename = 'tehaochi';
 ```
 
-### Mac本地的裸跑PG数据库
+## Mac本地的裸跑PG数据库
 
 ```bash
 # 初始化数据库
