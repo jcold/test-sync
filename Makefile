@@ -6,7 +6,7 @@ tag:
 	fi
 
 work:
-	DAOBOX_LOG=info,daobox_publish=trace,daobox_markdown=trace \
+	EVERKM_LOG=info,everkm_publish=trace,everkm_markdown=trace \
 		~/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish \
 		serve \
 		--theme yilog
