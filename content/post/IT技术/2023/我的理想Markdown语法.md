@@ -22,7 +22,7 @@ weight: 100
 
 **新增**
 
-* [宏](#daobox-macro)`{{daobox::include()}}`包含
+* [宏](#everkm-macro)`{{everkm::include()}}`包含
 * [内部链接](#inner-link)
 * [页内锚点](#page-anchor)
 
@@ -96,7 +96,7 @@ console.log('代码块+语法高亮')
 # 语法扩展
 
 
-{#daobox-macro}
+{#everkm-macro}
 ## 宏 
 
 ### TOC (Table of content) ✅
@@ -106,9 +106,9 @@ console.log('代码块+语法高亮')
 ```markdown
 [TOC]
 
-{{daobox::toc()}}
+{{everkm::toc()}}
 
-{{daobox::toc(level=1)}}
+{{everkm::toc(level=1)}}
 ```
 
 可选参数：
@@ -117,7 +117,7 @@ console.log('代码块+语法高亮')
 
 **Toc 示例**
 
-{{daobox::toc(level=1)}}
+{{everkm::toc(level=1)}}
 
 ---
 
@@ -143,9 +143,9 @@ console.log('代码块+语法高亮')
 **包含Markdown示例：**
 
 ```markdown
-{{daobox::include(file="_include_test.inc.md", as="md")}}
+{{everkm::include(file="_include_test.inc.md", as="md")}}
 ```
-{{daobox::include(file="_include_test.inc.md", as="md")}}
+{{everkm::include(file="_include_test.inc.md", as="md")}}
 
 ---
 
@@ -155,18 +155,18 @@ console.log('代码块+语法高亮')
 
 ```markdown
 {align=center}
-{{daobox::include(file="demo.csv", as="table", table_header=true, table_merge="*")}}
+{{everkm::include(file="demo.csv", as="table", table_header=true, table_merge="*")}}
 ```
 
 {align=center}
-{{daobox::include(file="demo.csv", as="table", table_header=true, table_merge="*")}}
+{{everkm::include(file="demo.csv", as="table", table_header=true, table_merge="*")}}
 
 ---
 
 **包含代码示例：**
 
 ```markdown
-{{daobox::include(file="_xx.js", as="code", code_lang="js")}}
+{{everkm::include(file="_xx.js", as="code", code_lang="js")}}
 ```
 
 {#inner-link}
