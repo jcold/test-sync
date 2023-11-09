@@ -1,6 +1,6 @@
-{% extends "_daobox/layout.html" %}
-{% import "_daobox/blocks.html" as blocks %}
-{% import "_daobox/blocks/nav.html" as nav_blocks %}
+{% extends "_everkm/layout.html" %}
+{% import "_everkm/blocks.html" as blocks %}
+{% import "_everkm/blocks/nav.html" as nav_blocks %}
 
 
 {% block body %}
@@ -8,15 +8,16 @@
     <h1 class="text-4xl font-extrabold mt-6"><a href="{{base_url()}}/">{{__cfg.site.name}}</a></h1>
     <p class="text-[95%] text-black/60">{{__cfg.site.summary}}</p>
 
+    {% set page_size = __cfg | get(key="page_size", default=5) %}
     {% set page_no =__qs.page | default(value=1) | int %}
-    {% set start = (page_no - 1) * 12 %}
-    {% set end = start + 12 %}
+    {% set start = (page_no - 1) * page_size %}
+    {% set end = start + page_size %}
     {% set items = posts(dir="/", recursive=true) %}
-    {% set page_count = script(content="Math.ceil(args.val)", val = items | length / 12 ) %}
+    {% set page_count = script(content="Math.ceil(args.val)", val = items | length / 5 ) %}
 
     {% if page_no < 2 and post_exist(path="/_page/home.md") %}
         {% set doc = post_detail(path="/_page/home.md") %}
-        <div class="yb-content2">
+        <div class="markdown-body">
         {{doc.content_html | safe}}
         </div>
     {% endif %}
@@ -24,7 +25,7 @@
     {% for doc in items | slice(start=start, end=end) %}
     <div class="space-y-2">
         <h2 class="text-2xl">
-            <a class="text-[#005b99] font-medium" href="{{base_url()}}/posts/{{doc.date | date(format="%Y") | safe}}/{{ doc.slug }}.html?path={{doc.path|urlencode_strict}}&__tpl={{"detail.html"|urlencode_strict}}" target="_blank">
+            <a class="text-[#005b99] font-medium" href="{{base_url()}}/posts/{{doc.date | date(format="%Y") | safe}}/{{ doc.slug | safe }}.html?path={{doc.path | urlencode_strict}}&__tpl={{"detail.html"|urlencode_strict}}" target="_blank">
             {{doc.title}}
             </a>
             {%if doc.weight > 0%}<span class="!text-red-500 mark-top"></span>{%endif%}
@@ -49,7 +50,9 @@
         </div>
         {% endif %}
 
+        {% if page_count > 1 %}
         <div class="">{{page_no}} / {{page_count}}</div>
+        {% endif %}
             
         {% if items | length > end %}
         <div class="flex items-center space-x-1">

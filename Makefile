@@ -7,15 +7,15 @@ tag:
 
 work:
 	DAOBOX_LOG=info,daobox_publish=trace,daobox_markdown=trace \
-		~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish \
+		~/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish \
 		serve \
 		--theme yilog
 
 web:
-	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-publish web --work-dir dist
+	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish web --work-dir dist
  
 dist:
-	daobox-publish serve \
+	everkm-publish serve \
 		--theme yilog \
 		--export
 

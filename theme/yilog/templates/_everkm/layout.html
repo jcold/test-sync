@@ -3,7 +3,6 @@
 
 <head>
     <title>{% block page_title %}{% endblock page_title %}{{__cfg.site.name}}</title>
-    <meta name="baidu-site-verification" content="codeva-deC3gmsizf" />
     <meta name="description" content="{{__cfg.site.description | default(value="")}}" />
     <meta name="keywords" content="{{__cfg.site.keywords | default(value="")}}" />
     {% block meta %}
@@ -17,28 +16,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="Windows-Target" contect="_top" />
-    <style>
-        h1 .heading-anchor, h2 .heading-anchor, h3 .heading-anchor{
-            visibility: hidden;
-        }
-
-        h1:hover .heading-anchor, h2:hover .heading-anchor, h3:hover .heading-anchor{
-            visibility: visible;
-        }
-
-        .md-toc li {
-            margin-top: 0.1em !important;
-            margin-bottom: 0.1em !important;
-        }
-        .md-toc ul {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-        }
-
-        th, td{
-            border-width: 1px;
-        }
-    </style>
     {% endblock meta %}
     {% block css %}
     {{ assets(section="main", type="css") }}
@@ -50,9 +27,9 @@
         {% block body %}{% endblock body %}
 
         {% block footer %}
-        <div class="text-sm block-container mt-12 text-gray-500 space-x-1.5">
+        <div class="text-sm block-container mt-12 text-gray-500 text-center space-x-1.5">
             <span>©{{now() | date(format="%Y")}}</span>
-            <span>by<a href="https://www.daobox.cn" target="_blank">道盒</a></span>
+            <span>by<a href="https://publish.everkm.cn" target="_blank">道盒发布</a></span>
             {% if __cfg.site.beian %}
             <span><a href="https://beian.miit.gov.cn" target="_blank">{{__cfg.site.beian}}</a></span>
             {% endif %}
@@ -60,7 +37,7 @@
         {% endblock footer %}
     </div>
     {% block js %}{{ assets(section="main", type="js") }}{% endblock js %}
-    {% include "_daobox/prism.html" %}
+    {% include "_everkm/prism.html" %}
 </body>
 
 </html>

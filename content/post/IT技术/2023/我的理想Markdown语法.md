@@ -6,7 +6,7 @@ weight: 100
 ---
 
 {.notice tc bgcolor="#FAC03D"}
-*停止更新！请前往[道盒笔记]获得支持。*
+*停止更新！请前往[道盒发布]获得支持。*
 
 **本页目录**
 
@@ -16,7 +16,7 @@ weight: 100
 
 ## 2023-10-03
 
-本格式规范迁移至[道盒笔记]实现，希望能为有相关痛点的你提供帮助。至此不再更新，如有意见建议，欢迎前往[道盒笔记]讨论。
+本格式规范迁移至[道盒发布]实现，希望能为有相关痛点的你提供帮助。至此不再更新，如有意见建议，欢迎前往[道盒发布]讨论。
 
 ## 2023-09-22
 
@@ -74,7 +74,7 @@ console.log('代码块+语法高亮')
 ---
 
 
-[链接](https://www.daobox.cn "标题可省略")
+[链接](https://www.everkm.cn "标题可省略")
 [页内链接](#链接ID)
 
 
@@ -199,10 +199,10 @@ console.log('代码块+语法高亮')
 ## 自动转换链接 ✅
 
 ```markdown
-<https://www.daobox.cn>
+<https://www.everkm.cn>
 ```
 
-hello <https://www.daobox.cn>{target=_blank color=red} world
+hello <https://www.everkm.cn>{target=_blank color=red} world
 
 
 {.main .shine #the-site lang=zh}
@@ -215,12 +215,12 @@ hello <https://www.daobox.cn>{target=_blank color=red} world
 3. 图片 ✅
 
 ```markdown
-带有扩展属性的[道盒](https://www.daobox.cn){color=orangered}链接。
+带有扩展属性的[道盒](https://www.everkm.cn){color=orangered}链接。
 
 ![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){corner=1em}
 ```
 
-带有扩展属性的[道盒](https://www.daobox.cn){color=orangered}链接。
+带有扩展属性的[道盒](https://www.everkm.cn){color=orangered}链接。
 
 ![Air](https://images.unsplash.com/photo-1564979045531-fa386a275b27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2532&q=80 "蓝天与狗尾巴草"){corner=1em}
 
@@ -414,9 +414,9 @@ I need to highlight these <mark>very important words</mark>.
 
 [^gfm]: <https://github.github.com/gfm/>
 
-[道盒发布]: https://publish.daobox.cn
+[道盒发布]: https://publish.everkm.cn
 
 [^slugify]: 通过对文本转换，从而生成有效链接地址。英文字母数字保持原样，空格替换为`-`，中文每个字符转换拼音后，使用`-`连接。==注:exclamation:==：字母+中文的连接处没有连字符`-`，如果需要请在中间添加英文空格。
 
 
-[道盒笔记]: https://note.daobox.cn
+[道盒发布]: https://publish.everkm.cn
