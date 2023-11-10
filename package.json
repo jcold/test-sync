@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "everkm-publish": "^0.10.3"
+    "everkm-publish": "^0.10.4"
   }
 }
