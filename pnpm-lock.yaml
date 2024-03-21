@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   everkm-publish:
-    specifier: ^0.10.5
-    version: 0.10.5
+    specifier: ^0.11.0
+    version: 0.11.0
 
 packages:
 
@@ -146,8 +146,8 @@ packages:
       once: 1.4.0
     dev: true
 
-  /everkm-publish@0.10.5:
-    resolution: {integrity: sha512-3AfL3R8kPjRWU5o6Ft5REGOICxMCqIC/GV1zqrgRalc06F/MpQOhWmrKR7LGQagDDpBcEjsP+Zw+E++JJPSUqw==}
+  /everkm-publish@0.11.0:
+    resolution: {integrity: sha512-U72jjsvRoATa737n6/31A/ffy1TpLWV/5O7ZnICKJiYGZSoQ5i9wLJp67cvIdcMQnefP7BSbNla6qa/xPQRZAw==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
