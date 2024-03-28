@@ -15,8 +15,12 @@ cfg:
   page_size: 12
 
 
-context:
-  - location:
-      - /posts/
-    qs:
-      __tpl: /detail.html
+sitemap:
+  children:
+    - path: /posts/**
+      qs:
+        __tpl: /detail.html
+      
+map_url:
+  - dir: /**
+    url: /posts/{{year}}/{{slug}}.html
