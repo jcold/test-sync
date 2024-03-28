@@ -1,7 +1,7 @@
 ---
 title: Ubuntu/Linux 三板斧
 date: 2023-08-31 11:36
-update_time: 2023-10-11 12:28
+update_at: 2023-10-11 12:28
 slug: ubuntu-tips
 ---
 
