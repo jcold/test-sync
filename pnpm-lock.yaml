@@ -6,13 +6,13 @@ settings:
 
 devDependencies:
   everkm-publish:
-    specifier: ^0.11.0
-    version: 0.11.0
+    specifier: ^0.12.1
+    version: 0.12.1
 
 packages:
 
-  /adm-zip@0.5.10:
-    resolution: {integrity: sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==}
+  /adm-zip@0.5.12:
+    resolution: {integrity: sha512-6TVU49mK6KZb4qG6xWaaM4C7sA/sgUMLy/JYMOzkcp3BvVLpW0fXDFQiIzAuxFCt/2+xD7fNIiPFAoLZPhVNLQ==}
     engines: {node: '>=6.0'}
     dev: true
 
@@ -146,16 +146,16 @@ packages:
       once: 1.4.0
     dev: true
 
-  /everkm-publish@0.11.0:
-    resolution: {integrity: sha512-U72jjsvRoATa737n6/31A/ffy1TpLWV/5O7ZnICKJiYGZSoQ5i9wLJp67cvIdcMQnefP7BSbNla6qa/xPQRZAw==}
+  /everkm-publish@0.12.1:
+    resolution: {integrity: sha512-T4bZixjW43oWcXU9X8IBpaU7TXqX280uC5RRJElr4b57/paiPQQFFtu2O1hucLOBDIIJUJzJRVP4tmtNXiRnXA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      adm-zip: 0.5.10
+      adm-zip: 0.5.12
       decompress: 4.2.1
       nodejs-file-downloader: 4.12.1
-      tar: 6.2.0
+      tar: 6.2.1
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -182,8 +182,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /follow-redirects@1.15.3:
-    resolution: {integrity: sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==}
+  /follow-redirects@1.15.6:
+    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -298,7 +298,7 @@ packages:
   /nodejs-file-downloader@4.12.1:
     resolution: {integrity: sha512-LpfCTNhh805AlLnJnzt1PuEj+RmbrccbAQZ6hBRw2e6QPVR0Qntuo6qqyvPHG5s77/0w0IEKgRAD4nbSnr/X4w==}
     dependencies:
-      follow-redirects: 1.15.3
+      follow-redirects: 1.15.6
       https-proxy-agent: 5.0.1
       mime-types: 2.1.35
       sanitize-filename: 1.6.3
@@ -406,8 +406,8 @@ packages:
       xtend: 4.0.2
     dev: true
 
-  /tar@6.2.0:
-    resolution: {integrity: sha512-/Wo7DcT0u5HUV486xg675HtjNd3BXZ6xDbzsCUZPt5iw8bTQ63bP0Raut3mvro9u+CUyq7YQd8Cx55fsZXxqLQ==}
+  /tar@6.2.1:
+    resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
     dependencies:
       chownr: 2.0.0
