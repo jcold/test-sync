@@ -17,8 +17,7 @@ brew install colima
 colima start
 ```
 
-不是那么丝滑，报错了。
-
+不是那么丝滑，报错了
 ```
 QEMU (homebrew) was broken on Intel: [hostagent] Driver stopped due to error: "signal: abort trap" (or "exit status 255") ... QEMU has already exited
 ```
@@ -29,14 +28,12 @@ QEMU (homebrew) was broken on Intel: [hostagent] Driver stopped due to error: "s
 brew reinstall -f --force-bottle qemu
 ```
 
-尝试后无用，应该是旧版本的 `qemu` 问题，不过很早已经修复了。继续查找
-
-查看错误日志发现：
+尝试后无用，应该是旧版本的 `qemu` 问题，不过很早已经修复了。继续查找错误日志发现：
 ```
 time="2023-08-16T11:22:47-04:00" level=warning msg="QEMU binary "~/.colima/_wrapper/3a9197e1ca3cd2da076da2b473d7a7eb118e2cca/bin/qemu-system-aarch64" is not properly signed with the "com.apple.security.hypervisor" entitlement" error="binary
 ```
 
-[解决方法](https://github.com/lima-vm/lima/issues/1742#issuecomment-1680834167) :pointe_down:
+[解决方法](https://github.com/lima-vm/lima/issues/1742#issuecomment-1680834167) :point_down:
 
 
 > 1. ARM Mac or Intel Mac?
@@ -117,5 +114,5 @@ Ref：<https://juejin.cn/post/7223045442892234812>
 
 ## 使用感受
 
-期望轻量化的需求没有什么改善（暂时未做关于虚拟机的设置），启动后 qemu 虚拟机还是 3G+ 内存没了，真是伤不起。
+轻量化的期望并没有什么大的改善（可能跟我未做虚拟机的相关设置有关），启动后， qemu 虚拟机还是占用 3G+ 内存，真是伤不起。
 有空再研究。
