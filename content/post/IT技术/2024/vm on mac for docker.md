@@ -1,4 +1,5 @@
 ---
+title: Mac Docker 虚拟机
 date: 2024-04-06 14:50
 ---
 
@@ -6,7 +7,7 @@ date: 2024-04-06 14:50
 
 Docker Desktop 在 MAC 上启动太费资源，一直想换掉，今天终于花点时间处理下。
 
-问了 Claude，Mac 上都有哪些轻量级的 Docker 容器推荐，第一个是 [`colima`](https://github.com/abiosoft/colima), MIT 开源。先用下试试。
+问了 Claude，Mac 上都有哪些轻量级的 Docker 容器推荐，第一个是 [`colima`](https://github.com/abiosoft/colima), MIT 开源。先用用试试。
 
 安装挺方便
 ```bash
