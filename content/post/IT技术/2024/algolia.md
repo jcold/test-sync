@@ -51,3 +51,12 @@ date: 2024-04-06 17:16
 使用步骤还是挺简单的，运行也没什么问题，可还是掉入了贫穷陷井，免费服务内容限制在1000个字符，付费也限制在10000，官方给的方案是，做内容拆分后提交。可从 `DocSearch` 文档中没有发现拆分的参数项，这也意味着，只能走自研这条路了。
 
 考虑到后续搜索 UI 也需要不少开发工作量，而以后肯定是要提供内置的搜索服务，索性界面也不用官方的，免得以后再开发一遍。真是路途坎坷呀！
+
+
+**Ref:**
+- [Prepare your records for indexing | Algolia](https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/)
+- [Netlify FAQ | Algolia](https://www.algolia.com/doc/tools/crawler/netlify-plugin/netlify-faq/)
+- [Showcase for InstantSearch.js widgets | Algolia](https://www.algolia.com/doc/guides/building-search-ui/widgets/showcase/js/)
+- [如何手动跑algolia的爬虫来打造自己的站点搜索呢🤔 - 掘金](https://juejin.cn/post/7265265606436962341)
+- [Data, record size, and usage limits | Algolia](https://www.algolia.com/doc/guides/sending-and-managing-data/prepare-your-data/in-depth/index-and-records-size-and-usage-limitations/#record-size-limits)
+- [Search API reference | Algolia](https://www.algolia.com/doc/rest-api/search/#hosts)
