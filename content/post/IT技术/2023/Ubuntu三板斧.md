@@ -1,7 +1,7 @@
 ---
 title: Ubuntu/Linux 三板斧
 date: 2023-08-31 11:36
-update_at: 2023-10-11 12:28
+update_at: 2024-04-07 14:10
 slug: ubuntu-tips
 ---
 
@@ -205,4 +205,14 @@ xz -l nohup.log.xz
 
 # xzcat对已压缩日志直接查看并过滤，或者 xzgrep 直接过滤
 xzcat nohup.log.xz | grep "18:29"
+```
+
+
+
+# 加载环境变量
+
+从当前目录中的 `.env` 文件中加载环境变量
+
+```bash
+export $(grep -v '^#' .env | xargs -0)
 ```
