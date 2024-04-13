@@ -1,0 +1,84 @@
+name: dayu.me release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - uses: pnpm/action-setup@v3
+      name: Install pnpm
+      with:
+        version: 8
+        run_install: false
+
+    - name: Get pnpm store directory
+      shell: bash
+      run: |
+        echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+    - uses: actions/cache@v4
+      name: Setup pnpm cache
+      with:
+        path: ${{ env.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: build html
+      run: |
+        pnpm i && make dist
+
+    - name: dist search
+      run: |
+        export ALGOLIA_APP_ID="${{ secrets.ALGOLIA_APP_ID }}"
+        export ALGOLIA_API_KEY="${{ secrets.ALGOLIA_API_KEY }}"
+        ./node_modules/.bin/ekmp-algolia --index-name dayu_me reset --languages zh --languages en
+        ./node_modules/.bin/ekmp-algolia --index-name dayu_me walk --url-base https://dayu.me/ --dir dist
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: results of built
+        branch: refs/heads/dist-pages
+        repository: dist/
+        status_options: '--untracked-files=normal'
+        add_options: '--force'
+        push_options: '--force'
+        skip_dirty_check: true    
+        skip_fetch: true    
+        skip_checkout: true
+        disable_globbing: true
+        create_branch: true
+
+    # - name: Send Telegram notification
+    #   env:
+    #     TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+    #     TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    #   run: |
+    #     if [ ${{ job.status }} == 'success' ]; then
+    #       MESSAGE="Deployment of ${GITHUB_WORKFLOW} successful!"
+    #     else
+    #       MESSAGE="Deployment of ${GITHUB_WORKFLOW} failed!"
+    #     fi
+    #     URL="https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"
+    #     curl -s -X POST $URL -d chat_id=${TELEGRAM_CHAT_ID} -d text="${MESSAGE}"
