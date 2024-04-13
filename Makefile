@@ -5,17 +5,24 @@ tag:
 		git push -f github $(TAG); \
 	fi
 
+
+ifneq (, $(shell echo $$DEBUG))
+  EKMP = "/Users/dayu/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish"
+else
+  EKMP = ./node_modules/.bin/everkm-publish
+endif
+
 work:
-	EVERKM_LOG=info,everkm_publish=trace,everkm_markdown=trace \
-		~/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish \
+	EVERKM_LOG=info,everkm_publish=debug,everkm_markdown=debug \
+		$(EKMP) \
 		serve \
 		--theme yilog
 
 web:
-	~/Coder/yiibox/daobox-server-next/wz-server/target/debug/everkm-publish web --work-dir dist
+	$(EKMP) web --work-dir dist
  
 dist:
-	everkm-publish serve \
+	$(EKMP) serve \
 		--theme yilog \
 		--export
 

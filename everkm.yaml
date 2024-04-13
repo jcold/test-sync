@@ -7,4 +7,15 @@ cfg:
     keywords: 大余, 道盒, dayu
     beian: 
   page_size: 12
+  default_lang: zh_CN
+  home_news:
+    section_name: Blog
+    dir: /
+    top_count: 5
+    more:
+      title: Blog here
+      link: ./blog/
 
+# map_url:
+#   - dir: /
+#     url: /posts/{{year}}/{{slug}}.html
