@@ -1,0 +1,47 @@
+.nav-tree {
+
+    font-size: 0.95em
+}
+
+  .nav-tree ul, .nav-tree ol {
+
+    margin-left: 1em
+}
+
+  .nav-tree ul:first-child, .nav-tree ol:first-child {
+
+    margin-left: 0px
+}
+
+  .nav-tree a, .nav-tree .node-title {
+
+    cursor: pointer;
+
+    --tw-text-opacity: 1;
+
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+
+    text-decoration-line: none
+}
+
+  .nav-tree a:hover, .nav-tree .node-title:hover {
+
+    --tw-text-opacity: 1;
+
+    color: rgb(37 99 235 / var(--tw-text-opacity))
+}
+
+  .nav-tree .active>* {
+
+    --tw-text-opacity: 1 !important;
+
+    color: rgb(37 99 235 / var(--tw-text-opacity)) !important
+}
+
+  .nav-tree .tree-node-item {
+
+    margin-top: 0.25rem;
+
+    margin-bottom: 0.25rem
+}
+

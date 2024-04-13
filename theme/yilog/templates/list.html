@@ -1,0 +1,99 @@
+{% extends "_everkm/layout.html" %}
+{% import "_everkm/common_blocks.html" as common_blocks %}
+{% import "_everkm/nav_blocks.html" as nav_blocks %}
+
+
+{% block body %}
+  {% set page_no =__qs.page | default(value=1) | int %}
+  {% set page_size =__qs.page_size | default(value=5) | int %}
+  {% set dir =__qs.dir | default(value="") %}
+  {% set category =__qs.category | default(value="") %}
+  {% set category_url_base =__qs.category_url_base | default(value="/") | safe %}
+  <div class="mx-auto max-w-screen-md">
+  <div class=" mb-10">
+
+    <div class="px-4 py-2 md:px-0 flex flex-col justify-stretch justify-items-center gap-4 md:items-center md:flex-row md:justify-between">
+      {% if __breadcrumbs %}
+      {% set navs = __breadcrumbs %}
+      {% if not category is empty %}
+        {% set cat_path = category | slugify %}
+        {% set cat_encoded = category | urlencode_strict %}
+        {% 
+          set cat_item = `{
+            "caption": "`~ category ~`", 
+            "url": "` ~ category_url_base ~ cat_path ~`/?category=`~ cat_encoded ~`"
+          }` | json 
+        %}
+        {% set navs = navs | concat(with=cat_item) %}
+      {% endif %}
+      {{ common_blocks::breadcrumb(navs = navs) }}
+
+      <!-- 分类 -->
+      {% set all_categories =  posts_caregory_list() %}
+      {% if not all_categories is empty %}
+      <div class="flex justify-center">
+        {% for k, v in all_categories %}
+        {% if loop.index0 %} <span class="mx-1 text-gray-500">&bull;</span> {% endif %}
+        <a class="{% if category == k %}text-amber-600{% endif %}" href="{{category_url_base|safe}}{{k|slugify}}/?category={{k|urlencode_strict}}">{{k}}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+
+    <div class="max-w-none px-4 md:px-0">
+      {% set start = (page_no - 1) * page_size %}
+      {% set end = start + page_size %}
+      {% set items = posts(dir=dir, categories=[category], recursive=true) %}
+      {% set page_count = items | length / page_size %}
+      {% set page_count = page_count | round(method="ceil") %}
+      {% for doc in items | slice(start=start, end=end) %}
+      <div class="space-y-2 my-4">
+        <h2 class="text-2xl">
+            <a class="text-black/90 underline-offset-8" href="{{doc.url_path | safe}}?path={{doc.path | urlencode_strict}}&__tpl={{"details.html"|urlencode_strict}}" target="_blank">
+            {{doc.title}}
+            </a>
+            {%if doc.weight > 0%}<span class="!text-red-500 mark-top"></span>{%endif%}
+        </h2>
+        <div class="text-[#2f353e] font-light text-[90%] number">
+            {{doc.update_at | date(format="%Y-%m-%d %H:%M")}}
+            {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+
+      {% if  page_count > 1 %}
+      <div class="space-x-6 flex !mt-10 text-normal items-center justify-center">
+        {% if page_no > 1 %}
+        <div class="flex items-center space-x-1">
+            {% if page_no == 2 %}
+            <a href="list.html" class="flex items-center gap-0.5">
+              {{nav_blocks::arrow_left(size="1.1em")}}
+              {{t(text="common: Prev page")}}
+            </a>
+            {% elif page_no > 2 %}
+            <a href="list.p{{page_no-1}}.html?page={{page_no-1}}" class="flex items-center gap-0.5">
+              {{nav_blocks::arrow_left(size="1.1em")}}
+              {{t(text="common: Prev page")}}
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <div class="text-gray-600">{{page_no}} / {{page_count}}</div>
+            
+        {% if items | length > end %}
+        <div class="flex items-center space-x-1">
+            <a href="list.p{{page_no+1}}.html?page={{page_no+1}}" class="flex items-center gap-0.5">
+              {{t(text="common: Next page")}}
+              {{nav_blocks::arrow_right(size="1.1em")}}
+            </a>
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock body %}

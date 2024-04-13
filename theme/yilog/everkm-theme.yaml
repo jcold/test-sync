@@ -1,26 +1,48 @@
 name: yilog
 author: dayu<dayu@dayu.me>
-repository: https://github.com/everkm/theme-yilog
+repository: https://github.com/daobox-site-theme/yilog
 demo: https://yilog.theme.daobox.cc/
 
 
-cfg:
-  site:
-    name: 道盒经典博客展示
-    contact: hello@example.com
-    summary: 此博客模板适用于道盒发布，可以在此基础上自由更改，分发。
-    keywords: everkm, publish, everkm-theme, yilog, 道盒
-    description: 经典BLOG模板。
-    # beian: 中ICP备20230828
-  page_size: 12
-
-
 sitemap:
+  channel_name: "{{t(text='Home')}}"
   children:
-    - path: /posts/**
+    - path: blog/
+      channel_name: "{{t(text='Blog')}}"
+      channel_path: blog/
       qs:
-        __tpl: /detail.html
-      
+        dir: /blog/
+        __tpl: list.html
+        no_dir: true
+        category_url_base: /blog/category/
+        page_size: 10
+    - path: docs/
+      channel_name: "{{t(text='Docs')}}"
+      channel_path: docs/
+      qs:
+        nav: /docs/_nav.md
+        __tpl: book.html
+        ajax: /docs/
+    - path: guide/
+      channel_name: "{{t(text='Guides')}}"
+      channel_path: guide/
+      qs:
+        nav: /guide/_nav.md
+        __tpl: book.html
+        ajax: /guide/
+    - path: download.html
+      channel_name: "{{t(text='download: channel download')}}"
+    - path: changelog.html
+      channel_name: "{{t(text='Changelog')}}"
+      qs:
+        __tpl: details.html
+        no_dir: true
+        no_time: true
+
 map_url:
-  - dir: /**
-    url: /posts/{{year}}/{{slug}}.html
+  - dir: /blog/
+    url: /blog/{{year}}/{{slug}}.html
+  - dir: /docs/
+    url: /docs/{{slug}}.html
+  - dir: /guide/
+    url: /guide/{{slug}}.html
