@@ -18,9 +18,8 @@ cfg:
   in_search:
     app_id: 1N74YC70XF
     api_key: 95bb37e3122ee9cb57a8ee0abbd14409
-    index.zh_CN: publish
-    index.en_US: publish_en
-    
+    index: dayu_me
+
 # map_url:
 #   - dir: /
 #     url: /posts/{{year}}/{{slug}}.html
