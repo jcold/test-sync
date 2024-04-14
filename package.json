@@ -11,6 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "ekmp-algolia": "^0.0.4",
-    "everkm-publish": "^0.12.4"
+    "everkm-publish": "^0.12.5"
   }
 }
