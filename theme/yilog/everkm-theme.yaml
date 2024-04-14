@@ -9,23 +9,20 @@ sitemap:
   children:
     - path: blog
       channel_name: "{{t(text='Blog')}}"
-      channel_path: blog/
       qs:
         dir: /blog/
         __tpl: list.html
         no_dir: true
         category_url_base: /blog/category/
         page_size: 10
-    - path: docs/
+    - path: docs
       channel_name: "{{t(text='Docs')}}"
-      channel_path: docs/
       qs:
         nav: /docs/_nav.md
         __tpl: book.html
         ajax: /docs/
-    - path: guide/
+    - path: guide
       channel_name: "{{t(text='Guides')}}"
-      channel_path: guide/
       qs:
         nav: /guide/_nav.md
         __tpl: book.html
@@ -41,7 +38,7 @@ sitemap:
 
 map_url:
   - dir: /blog/
-    url: /blog/{{year}}/{{slug}}.html
+    url: /blog/posts/{{year}}/{{slug}}.html
   - dir: /docs/
     url: /docs/{{slug}}.html
   - dir: /guide/
