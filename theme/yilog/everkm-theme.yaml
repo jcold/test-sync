@@ -16,6 +16,10 @@ sitemap:
         no_dir: true
         category_url_base: /blog/category/
         page_size: 10
+      children:
+        - path: "*/*"
+          qs:
+            __tpl: details.html
     - path: docs/
       channel_name: "{{t(text='Docs')}}"
       channel_path: docs/
