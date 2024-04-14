@@ -13,12 +13,11 @@ else
 endif
 
 work:
-	EVERKM_LOG=info,everkm_publish=debug,everkm_markdown=debug \
-		$(EKMP) \
+	$(EKMP) \
 		serve \
 		--theme yilog
 
-web:
+preview:
 	$(EKMP) web --work-dir dist
  
 dist:
