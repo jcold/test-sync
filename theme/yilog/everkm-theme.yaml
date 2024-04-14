@@ -7,7 +7,7 @@ demo: https://yilog.theme.daobox.cc/
 sitemap:
   channel_name: "{{t(text='Home')}}"
   children:
-    - path: blog/
+    - path: blog
       channel_name: "{{t(text='Blog')}}"
       channel_path: blog/
       qs:
