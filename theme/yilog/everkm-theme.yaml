@@ -15,6 +15,10 @@ sitemap:
         no_dir: true
         category_url_base: /blog/category/
         page_size: 10
+      children:
+        - path: */*
+          qs:
+            __tpl: details.html
     - path: docs
       channel_name: "{{t(text='Docs')}}"
       qs:
@@ -38,7 +42,7 @@ sitemap:
 
 map_url:
   - dir: /blog/
-    url: /blog/posts/{{year}}/{{slug}}.html
+    url: /blog/{{year}}/{{slug}}.html
   - dir: /docs/
     url: /docs/{{slug}}.html
   - dir: /guide/
