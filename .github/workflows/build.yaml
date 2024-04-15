@@ -1,4 +1,4 @@
-name: dayu.me release
+name: dayu.me Release
 
 on:
   push:
@@ -58,7 +58,7 @@ jobs:
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: ${{ github.ref }} dist results, sha: ${{ github.sha }}
+        commit_message: "${{ github.ref }} dist results, sha: ${{ github.sha }}"
         branch: refs/heads/dist-pages
         repository: dist/
         status_options: '--untracked-files=normal'
@@ -69,16 +69,3 @@ jobs:
         skip_checkout: true
         disable_globbing: true
         create_branch: true
-
-    # - name: Send Telegram notification
-    #   env:
-    #     TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-    #     TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-    #   run: |
-    #     if [ ${{ job.status }} == 'success' ]; then
-    #       MESSAGE="Deployment of ${GITHUB_WORKFLOW} successful!"
-    #     else
-    #       MESSAGE="Deployment of ${GITHUB_WORKFLOW} failed!"
-    #     fi
-    #     URL="https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"
-    #     curl -s -X POST $URL -d chat_id=${TELEGRAM_CHAT_ID} -d text="${MESSAGE}"
