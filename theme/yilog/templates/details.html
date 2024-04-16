@@ -34,7 +34,10 @@
   <div class="flex flex-col md:flex-row md:gap-4 text-[0.9em] text-gray-500">
     <div class="">
       {% if not __qs | get(key="no_time", default=false) %}
-        <span>{{doc.date | date(format="%Y-%m-%d %H:%M")}}</span>
+        <span>
+        {{doc.update_at | date(format="%Y-%m-%d %H:%M:%S")}}
+        {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
+        </span>
       {% endif %}
     </div>
 

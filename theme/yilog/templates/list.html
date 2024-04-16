@@ -57,7 +57,7 @@
             {%if doc.weight > 0%}<span class="!text-red-500 mark-top"></span>{%endif%}
         </h2>
         <div class="text-[#2f353e] font-light text-[90%] number">
-            {{doc.update_at | date(format="%Y-%m-%d %H:%M")}}
+            {{doc.update_at | date(format="%Y-%m-%d %H:%M:%S")}}
             {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
         </div>
       </div>

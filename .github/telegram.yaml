@@ -7,7 +7,7 @@ name: Telegram Notification
 on:
   workflow_run:
     workflows: 
-      - dayu.me Release
+      - "dayu_me3 Release"
     types:
       - completed
 

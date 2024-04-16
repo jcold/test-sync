@@ -9,19 +9,19 @@
   "assets/770.3d62182d.js": "assets/770.3d62182d.js",
   "assets/955.e73c81ad.css": "assets/955.e73c81ad.css",
   "assets/955.e73c81ad.js": "assets/955.e73c81ad.js",
-  "assets/main.c19674c5.js.LICENSE.txt": "assets/main.c19674c5.js.LICENSE.txt",
+  "assets/main.d7eec4fe.js.LICENSE.txt": "assets/main.d7eec4fe.js.LICENSE.txt",
   "entrypoints": {
     "main": {
       "assets": {
         "css": [
-          "assets/main.c19674c5.css"
+          "assets/main.d7eec4fe.css"
         ],
         "js": [
-          "assets/main.c19674c5.js"
+          "assets/main.d7eec4fe.js"
         ]
       }
     }
   },
-  "main.css": "assets/main.c19674c5.css",
-  "main.js": "assets/main.c19674c5.js"
+  "main.css": "assets/main.d7eec4fe.css",
+  "main.js": "assets/main.d7eec4fe.js"
 }

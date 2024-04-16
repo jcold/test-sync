@@ -36,11 +36,11 @@
       <a class="text-black/90"
         href="{{doc.url_path | safe}}?path={{doc.path | urlencode_strict}}&__tpl={{"details.html"|urlencode_strict}}"
         target="_blank">
-        {{doc.title}}
+        {{doc.title}}顶起
       </a>
       {%if doc.weight > 0%}<span class="!text-red-500 mark-top"></span>{%endif%}
       <span class="text-[#2f353e] font-light text-[0.9em] number">
-        {{doc.update_at | date(format="%Y-%m-%d %H:%M")}}
+        {{doc.update_at | date(format="%Y-%m-%d %H:%M:%S")}}
         {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
       </span>
     </li>

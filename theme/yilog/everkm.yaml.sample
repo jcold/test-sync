@@ -9,12 +9,12 @@ cfg:
   page_size: 12
   default_lang: zh_CN
   home_news:
-    section_name: 古文观止
-    dir: /古文观止/
+    section_name: Blog
+    dir: /blog/
     top_count: 5
     more:
       title: More
-      link: ./gu-wen-guan-zhi/
+      link: ./blog/
 
 sitemap:
   channel_name: 首页
@@ -23,11 +23,6 @@ sitemap:
       channel_name: 文章
       qs:
         __tpl: details.html
-    - path: gu-wen-guan-zhi/
-      channel_name: 观止
-      qs:
-        dir: /古文观止/
-        __tpl: list.html
     - path: wiki/
       channel_name: WIKI
       qs:
@@ -42,7 +37,3 @@ sitemap:
 map_url:
   - dir: /_wiki/
     url: /wiki/{{slug}}.html
-  - dir: /古文观止/
-    url: /gu-wen-guan-zhi/{{year}}/{{slug}}.html
-  - dir: /
-    url: /posts/{{year}}/{{slug}}.html
