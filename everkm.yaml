@@ -1,6 +1,6 @@
 cfg:
   site:
-    name: 大余之道
+    name: 🌾大余之道
     contact: 联系方式：dayu[at]dayu.me，请注意替换@。
     summary: 资质平平的互联网从业者，至今碌碌无为，毫无建树，但始终坚信未来可期的大龄码农。
     description: 大余的修行日志。
@@ -11,7 +11,7 @@ cfg:
   home_news:
     section_name: Blog
     dir: /
-    top_count: 5
+    top_count: 7
     more:
       title: Blog here
       link: ./blog/
