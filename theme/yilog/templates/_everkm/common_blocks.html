@@ -16,13 +16,13 @@
                     default="")}}</span>
             </div>
         </div>
-        <div class="hidden md:flex space-x-2">
-            {{self::in_search(only_button=false)}}
+        <div class="hidden md:flex space-x-3">
+            {{self::embed_search(only_button=false)}}
             {{self::primary_nav()}}
         </div>
 
         <div class="flex-shrink-0 ml-4 overflow-hidden md:hidden flex items-center gap-3">
-            {{self::in_search(only_button=true)}}
+            {{self::embed_search(only_button=true)}}
             {% if with_menu %}
             {{drawer_blocks::icon_button()}}
             {% endif %}
@@ -39,12 +39,12 @@
     {% endfor %}
 {% endmacro %}
 
-{% macro in_search(only_button=true) %}
-    {% if local_cfg_exist(key='/in_search') %}
+{% macro embed_search(only_button=true) %}
+    {% if local_cfg_exist(key='/embed_search') %}
     <div class="inline-flex items-center">
-        <ekm-in-search app-id="{{local_cfg(key='/in_search/app_id')}}" 
-                   api-key="{{local_cfg(key='/in_search/api_key')}}"
-                   index="{{local_cfg(key='/in_search/index')}}" 
+        <ekm-in-search app-id="{{local_cfg(key='/embed_search/app_id')}}" 
+                   api-key="{{local_cfg(key='/embed_search/api_key')}}"
+                   index="{{local_cfg(key='/embed_search/index')}}" 
                    only-button="{{only_button}}"
                    class="inline-flex" />
     </div>
