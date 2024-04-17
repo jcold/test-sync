@@ -35,7 +35,7 @@
     <div class="">
       {% if not __qs | get(key="no_time", default=false) %}
         <span>
-        {{doc.update_at | date(format="%Y-%m-%d %H:%M:%S")}}
+        {{doc.update_at | date(format=local_cfg(key="date_format", default="%Y-%m-%d %H:%M:%S"))}}
         {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
         </span>
       {% endif %}

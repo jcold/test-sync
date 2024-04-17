@@ -9,19 +9,19 @@
   "assets/616.47e2f2d1.js": "assets/616.47e2f2d1.js",
   "assets/849.3342a648.js": "assets/849.3342a648.js",
   "assets/849.3342a648.js.LICENSE.txt": "assets/849.3342a648.js.LICENSE.txt",
-  "assets/main.35af4d4d.js.LICENSE.txt": "assets/main.35af4d4d.js.LICENSE.txt",
+  "assets/main.dc2e1209.js.LICENSE.txt": "assets/main.dc2e1209.js.LICENSE.txt",
   "entrypoints": {
     "main": {
       "assets": {
         "css": [
-          "assets/main.35af4d4d.css"
+          "assets/main.dc2e1209.css"
         ],
         "js": [
-          "assets/main.35af4d4d.js"
+          "assets/main.dc2e1209.js"
         ]
       }
     }
   },
-  "main.css": "assets/main.35af4d4d.css",
-  "main.js": "assets/main.35af4d4d.js"
+  "main.css": "assets/main.dc2e1209.css",
+  "main.js": "assets/main.dc2e1209.js"
 }

@@ -2,13 +2,15 @@ cfg:
   site:
     name: 道盒发布模板
     contact: hello@example.com
-    # beian: 中ICP备20230828
+    # beian.zh_CN: 中ICP备20230828
   
   # 每页数量
   page_size: 12
 
   # 界面默认翻译语言
   default_lang: zh_CN
+  # 日期格式, 默认: `%Y-%m-%d %H:%M:%S`
+  date_format: "%Y-%m-%d %H:%M"
 
   # 主导航
   primary_nav.zh_CN:
