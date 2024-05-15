@@ -13,7 +13,7 @@ title: Rust Build On Windows(10)
 
 ## Strawberry Perl
 
-若非专业，不用使用 ActiveState 安装。
+若非专业，不要使用 ActiveState 安装。
 
 
 ## Choco
@@ -60,14 +60,17 @@ pip install requests
 1. run `./vcpkg.exe integrate install`
 1. run `set VCPKGRS_DYNAMIC=1` (or simply set it as your environment variable)
 
+{.NOTE}
+记得添加到 `PATH` 搜索路径。
+
 
 ## Drone exec
 
 Ref: <https://docs.drone.io/runner/exec/installation/windows/>
 
-准备两样
+一、准备两样
 
-1. 与中心通信配置的配置文件
+1. 与中心通信的配置文件
 
     ```toml
     DRONE_RPC_PROTO=https
@@ -78,18 +81,18 @@ Ref: <https://docs.drone.io/runner/exec/installation/windows/>
     DRONE_HTTP_BIND=:5430 
     ```
 
-    ref: <https://docs.drone.io/runner/exec/configuration/reference/drone-http-bind/>
+    Ref: <https://docs.drone.io/runner/exec/configuration/reference/drone-http-bind/>
 
 
-2. 设置日志保存路径环境变量 
+2. 设置日志保存路径通过环境变量 
 
-    通过 Windows 环境变量设置方式设置，记得重启。
+    通过 Windows 环境变量界面设置，记得重启。
 
     ```bash
     DRONE_LOG_FILE=C:\Drone\drone-runner-exec\log.txt
     ```
 
-之后注册 Windows 服务并启动
+二、注册 Windows 服务并启动
 
 ```bash
 .\drone-runner-exec.exe service install --config  "C:\Drone\drone-runner-exec\config"
@@ -149,5 +152,5 @@ powershell对于脚本的执行有着严格的安全限制
 $env:PATH
 
 # 临时设置
-$env:PATH="xxx;$env:PATH"
+$env:PATH="<New path>;$env:PATH"
 ```
