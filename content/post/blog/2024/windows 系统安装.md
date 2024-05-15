@@ -34,3 +34,8 @@ irm https://massgrave.dev/get | iex
 Ref: 
 1. <https://xiakeshu.com/230.html>
 2. <https://github.com/massgravel/Microsoft-Activation-Scripts>
+
+
+## 使用不愉快
+
+1. 后台任务被暂停 https://www.cnblogs.com/landhu/p/17045466.html
