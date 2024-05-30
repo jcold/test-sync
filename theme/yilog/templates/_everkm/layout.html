@@ -1,12 +1,10 @@
-{% import "_everkm/common_blocks.html" as common_blocks %}
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>{% block page_title %}{% endblock page_title %}{{local_cfg(key="/site/name")}}</title>
-    <meta name="description" content="{%block page_description%}{%endblock page_description%}" />
-    <meta name="keywords" content="{%block page_keywords%}{%endblock page_keywords%}" />
+    <title>{% block page_title %}{% endblock page_title %}{{__cfg.site.name}}</title>
+    <meta name="description" content="{{__cfg.site.description | default(value="")}}" />
+    <meta name="keywords" content="{{__cfg.site.keywords | default(value="")}}" />
     {% block meta %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -22,39 +20,24 @@
     {% block css %}
     {{ assets(section="main", type="css") }}
     {% endblock css %}
-    <script>window.__everkm_lang = "{{ __lang | default(value='') }}"</script>
 </head>
 
 <body>
-    <div class="body-container">
-        {% block header %}
-        <div class="app-header border-b sticky top-0 z-10 w-full h-[3.5rem] overflow-hidden bg-white flex items-center">
-            {{common_blocks::app_header(with_menu=true)}}
-        </div>
-        <!-- 左导航栏 -->
-        <div id="aside-nav" class="hidden fixed top-0 w-3/4 max-w-xs px-4 z-20 overscroll-contain border-r overflow-y-auto h-screen md:h-[calc(100vh-var(--app-header-height))] md:w-full md:max-w-none md:top-[3.5rem] md:sticky md:hidden">
-            <div class="drawer-body space-y-4">
-                <div class="md:hidden space-y-1.5 border-b pb-3">
-                    {{common_blocks::primary_nav()}}
-                </div>
-            </div>
-        </div>
-        {% endblock header %}
-
+    <div class="body-container text-[#2f353e]">
         {% block body %}{% endblock body %}
 
         {% block footer %}
-        {% include "_everkm/footer.html" %}
+        <div class="text-sm block-container mt-12 text-gray-500 text-center space-x-1.5">
+            <span>©{{now() | date(format="%Y")}}</span>
+            <span>by<a href="https://publish.everkm.cn" target="_blank">道盒发布</a></span>
+            {% if __cfg.site.beian %}
+            <span><a href="https://beian.miit.gov.cn" target="_blank">{{__cfg.site.beian}}</a></span>
+            {% endif %}
+        </div>
         {% endblock footer %}
     </div>
-
-
-    {% block js %}
-    {{ assets(section="main", type="js") }}
-    {% endblock js %}
-
+    {% block js %}{{ assets(section="main", type="js") }}{% endblock js %}
     {% include "_everkm/prism.html" %}
-    {% include "_everkm/google_tag.html" %}
 </body>
 
 </html>

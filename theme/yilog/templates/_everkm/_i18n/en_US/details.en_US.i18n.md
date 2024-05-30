@@ -1,5 +1,0 @@
-# Date
-Date
-
-# Category
-Category

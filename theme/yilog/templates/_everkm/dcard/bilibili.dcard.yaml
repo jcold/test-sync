@@ -1,7 +1,0 @@
-name: bilibili
-assets:
-  entrypoint: 
-    - assets/b.css
-    - assets/a.js
-  files:
-    - assets/**/*.{css|js}
