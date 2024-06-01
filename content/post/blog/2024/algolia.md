@@ -27,7 +27,7 @@ date: 2024-04-06 17:16
 
 2. 抓取配置文件， `config.json`, 配置抓取起始地址和内容选择器
 
-    ```json
+```json
     {
         "index_name": "publish",
         "start_urls": [
