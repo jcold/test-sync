@@ -14,4 +14,4 @@ ffmpeg -i dahua_shenbu.mp4 -an -vf select='eq(pict_type\,I)' -vsync 2 -s '544*96
 可以吗
 
 
-近期有一定
+近期有一定关系好吗？
