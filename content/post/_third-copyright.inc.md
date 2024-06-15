@@ -1,4 +1,6 @@
-{.notice tc color=red}
+for (let 我们 = 0; 我们 < 哪里了; 我们++) {
+  
+}{.notice tc color=red}
 *本文摘自网络，未考究出处，版权归原权利人所有！*
 nfn
 
