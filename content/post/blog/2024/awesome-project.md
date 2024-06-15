@@ -1,7 +1,7 @@
 
 # 关s
 
-[baidu](https://baidu.)
+[baidu](https://baidu.com)
 页面***内嵌***所有的资源。
 
 1. https://github.com/Y2Z/monolith
