@@ -1,4 +1,6 @@
-## 关s
+for (let index = 0; index < end; index++) {
+  
+}## 关s
 
 
 helo~~del~~world
