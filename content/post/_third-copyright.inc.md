@@ -1,6 +1,4 @@
-for (let 我们 = 0; 我们 < 哪里了; 我们++) {
-  有可能
-}哦咯{.notice tc color=red}
+{.notice tc color=red}
 *本文摘自网络，未考究出处，版权归原权利人所有！*
 nfn
 
