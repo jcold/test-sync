@@ -20,7 +20,7 @@ I need to highlight these ==very important words==.
 
 [baidu](https://baidu.com)
 
-# 页面***内嵌***所有的资源。
+页面***内嵌***所有的资源。
 
 1. https://github.com/Y2Z/monolith
     nice2
