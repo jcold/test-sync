@@ -20,9 +20,9 @@ H~2~O
 
 2. [ ] NICE
 
-    1. aa
+    * aa
     
-    2. bb
+    * bb
 
 
 
