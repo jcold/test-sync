@@ -15,15 +15,11 @@ E=MC^2^
 H~2~O
 
 
-I need to highlight these ==very important words==.I need to highlight these ==very important words==.
+1. I need to highlight these ==very important words==.
 
-NICE
+2. NICE
 
-GILRI need to highlight these ==very important words==.
-
-NICE
-
-GILRGILRNICE
+3. GILR
 
 
 [baidu](https://baidu.com)
