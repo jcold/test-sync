@@ -20,10 +20,9 @@ H~2~O
 
 2. [ ] NICE
 
-DF
-
-
-DD
+    1. DF
+    
+    2. DD
 
 3. [ ] GILR
 
