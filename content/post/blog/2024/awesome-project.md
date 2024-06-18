@@ -15,16 +15,15 @@ E=MC^2^
 H~2~O
 
 
-1. I need to highlight these ==very important words==.
+* I need to highlight these ==very important words==.
 
-   SD
+  SD
 
-
-3. NICE
+* NICE
 
   4. SDF
 
-5. GILR
+* GILR
 
 
 [baidu](https://baidu.com)
