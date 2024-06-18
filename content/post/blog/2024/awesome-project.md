@@ -15,7 +15,11 @@ E=MC^2^
 H~2~O
 
 
-* I need to highlight these ==very important words==.
+1. I need to highlight these ==very important words==.
+
+2. NICE
+
+3. GILR
 
 
 [baidu](https://baidu.com)
