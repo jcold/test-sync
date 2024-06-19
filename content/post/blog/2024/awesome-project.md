@@ -36,7 +36,7 @@ H~2~O
 1. https://github.com/Y2Z/monolith
     nice2
 
-    将 `HTML` 保存为__一个__页面，*内嵌*所{ul}#有的#资源。
+    将 `HTML` **保存**为__一个__页面，*内嵌*所{ul}#有的#资源。
 
 2. hello
 
