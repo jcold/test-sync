@@ -17,12 +17,14 @@ H~2~O
 
   SD
 
-* NICE
-  1. aa
-  
-  2. bb
 
-* GILR
+
+1. NICE
+   1. aa
+
+   2. bb
+
+2. GILR
 
 
 [baidu](https://baidu.com)
