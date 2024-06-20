@@ -10,7 +10,7 @@
 
 ## helo~~del~~world
 
-hello ~~world~~
+hello world
 
 E=MC^2^
 
