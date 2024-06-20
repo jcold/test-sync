@@ -31,7 +31,7 @@ H~2~O
 
 [baidu](https://baidu.com)
 
-页面***内嵌***所有的**hello**world**资源**。
+页面***内嵌***所有的**hello**world资源。
 
 1. https://github.com/Y2Z/monolith
     nice2
