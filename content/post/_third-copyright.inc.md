@@ -15,12 +15,6 @@ asdf
 
 嗯咯，林
 
-```girl
-nice
-```
-
-
-
 > adbd
 > adfasdf
 
