@@ -10,7 +10,7 @@
 
 ## helo~~del~~world
 
-1. [ ] hello world
+1. [x] hello world
 
 2. [ ] E=MC^2^
 
