@@ -42,6 +42,10 @@ hello world
 
 2. hello
 
+| a | b |
+|--|--|
+| c | d |
+
 ```
 hello
 ```
