@@ -10,9 +10,9 @@
 
 ## helo~~del~~world
 
-hello world
+1. [ ] hello world
 
-E=MC^2^
+2. [ ] E=MC^2^
 
 H~2~O
 * I need to highlight these ==very important words==.
