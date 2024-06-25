@@ -7,7 +7,7 @@ nfn
 2. [ ] abcd, nice
 3. [ ] 体育，那种人性的，看样子
 
-林俊杰演唱会哦莫，记一下[铁了](https://ab.com)sd心疼，
+林俊杰演唱会哦莫，记一下[铁了](https://ab.com)心疼，
 
 ```world
 hello
