@@ -1,0 +1,16 @@
+<div class="footer text-center space-y-2">
+    <div class="footer-nav text-sm">
+        {% for nav in local_cfg(key="bottom_nav", default=[]) %}
+        <div><a href="{{nav.url|safe}}">{{nav.title}}</a></div>
+        {% endfor %}
+    </div>
+    <div class="!text-gray-500 text-xs flex gap-3 justify-center">
+        {% if local_cfg_exist(key="/about/title") %}
+        <span><a class="!text-gray-500" href="{{local_cfg(key="/about/url", default="")|safe}}">{{local_cfg(key="/about/title")}}</a></span>
+        {% endif %}
+        
+        {% if local_cfg_exist(key="/site/beian") %}
+        <a href="https://beian.miit.gov.cn/" target="_blank" class="!text-gray-500">{{local_cfg(key="/site/beian")}}</a>
+        {% endif %}
+    </div>
+</div>

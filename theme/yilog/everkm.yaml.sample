@@ -1,0 +1,61 @@
+cfg:
+  site:
+    name: 道盒发布模板
+    contact: hello@example.com
+    # beian.zh_CN: 中ICP备20230828
+  
+  # 每页数量
+  page_size: 12
+
+  # 界面默认翻译语言
+  default_lang: zh_CN
+  # 日期格式, 默认: `%Y-%m-%d %H:%M:%S`
+  date_format: "%Y-%m-%d %H:%M"
+
+  # 主导航
+  primary_nav.zh_CN:
+    - title: Home
+      url: /
+    - title: Blog
+      url: /blog/
+    - title: Wiki
+      url: /wiki/
+
+  # 首页展示最新
+  home_news:
+    section_name: Blog Demo
+    dir: /blog/
+    top_count: 5
+    more:
+      title: More
+      link: ./blog/
+
+  # Algolia 及时搜索配置参数
+  embed_search:
+    app_id: 1N74YC70XF
+    api_key: 95bb37e3122ee9cb57a8ee0abbd14409
+    index: yilog
+
+# 站点结构配置
+sitemap:
+  channel_name: 首页
+  children:
+    - path: posts/
+      channel_name: 文章
+      qs:
+        __tpl: details.html
+    - path: wiki/
+      channel_name: WIKI
+      qs:
+        __tpl: wiki.html
+      children:
+        - path: /index.html
+          qs:
+            __tpl: wiki.html
+            home: 1
+            path: /_wiki/index.md
+
+# 由 markdown 文件生成 URL 的规则。多用于内联文档的文件地址转换 URL。
+map_url:
+  - dir: /_wiki/
+    url: /wiki/{{slug}}.html

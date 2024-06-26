@@ -1,0 +1,59 @@
+{% extends "_everkm/layout.html" %}
+{% import "_everkm/common_blocks.html" as common_blocks %}
+
+
+{% block page_title -%}
+{% set doc = post_meta(id=__qs | get(key="id", default=""), path=__qs | get(key="path", default="")) %}
+{{doc.title ~ " | " -}}
+{%- endblock page_title %}
+
+{% block page_keywords -%}
+{% set meta = post_meta(path=__qs | get(key="path", default="")) %}
+{{- meta | get(key="meta/keywords", default="") }}
+{%- endblock page_keywords %}
+
+{% block page_description -%}
+{% set meta = post_meta(path=__qs | get(key="path", default="")) %}
+{{- meta | get(key="meta/description", default="") }}
+{%- endblock page_description %}
+
+
+{% block body %}
+{% set category_url_base =__qs.category_url_base | default(value="/") | safe %}
+<div class="mx-auto max-w-screen-md mb-10 space-y-2 px-4 lg:px-8 pt-3">
+  {% set doc = post_detail(id=__qs | get(key="id", default=""), path=__qs | get(key="path", default="")) %}
+
+  {% if __breadcrumbs %}
+  <div class="">
+    {{ common_blocks::breadcrumb(navs = __breadcrumbs) }}
+  </div>
+  {% endif %}
+
+  <h1 class="text-2xl font-semibold pt-2">{{doc.title}}</h1>
+
+  <div class="flex flex-col md:flex-row md:gap-4 text-[0.9em] text-gray-500">
+    <div class="">
+      {% if not __qs | get(key="no_time", default=false) %}
+        <span>
+        {{doc.update_at | date(format=local_cfg(key="date_format", default="%Y-%m-%d %H:%M:%S"))}}
+        {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
+        </span>
+      {% endif %}
+    </div>
+
+    {% if doc.categories %}
+    <div class="">
+      <span>{{t(text="details: Category")}}: </span>
+      {% for cat in doc.categories%}
+        {% if loop.index0 %} <span class=" text-gray-500">&bull;</span> {% endif %}
+        <a href="{{category_url_base}}{{cat|slugify}}/?category={{cat|urlencode_strict}}">{{cat}}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+  <div class="markdown-body pt-4">
+    {{doc.content_html | safe}}
+  </div>
+</div>
+{% endblock body %}

@@ -1,16 +1,27 @@
 {
+  "assets/100.a94a1d1c.css": "assets/100.a94a1d1c.css",
+  "assets/100.a94a1d1c.js": "assets/100.a94a1d1c.js",
+  "assets/156.83bac48a.css": "assets/156.83bac48a.css",
+  "assets/156.83bac48a.js": "assets/156.83bac48a.js",
+  "assets/177.1992b39b.js": "assets/177.1992b39b.js",
+  "assets/199.72f2c5e1.css": "assets/199.72f2c5e1.css",
+  "assets/199.72f2c5e1.js": "assets/199.72f2c5e1.js",
+  "assets/616.47e2f2d1.js": "assets/616.47e2f2d1.js",
+  "assets/849.3342a648.js": "assets/849.3342a648.js",
+  "assets/849.3342a648.js.LICENSE.txt": "assets/849.3342a648.js.LICENSE.txt",
+  "assets/main.dc2e1209.js.LICENSE.txt": "assets/main.dc2e1209.js.LICENSE.txt",
   "entrypoints": {
     "main": {
       "assets": {
         "css": [
-          "assets/main.0ce293c8.css"
+          "assets/main.dc2e1209.css"
         ],
         "js": [
-          "assets/main.0ce293c8.js"
+          "assets/main.dc2e1209.js"
         ]
       }
     }
   },
-  "main.css": "assets/main.0ce293c8.css",
-  "main.js": "assets/main.0ce293c8.js"
+  "main.css": "assets/main.dc2e1209.css",
+  "main.js": "assets/main.dc2e1209.js"
 }

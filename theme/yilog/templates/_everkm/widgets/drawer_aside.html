@@ -1,0 +1,12 @@
+{% macro drawer_aside(body) %}
+<div class="nav-tree invisible">
+    {{body|safe}}
+</div>
+{% endmacro drawer_aside %}
+
+
+{% macro icon_button(id="drawer") %}
+<div id="{{id}}" class="w-6 h-6 flex items-center justify-center active:bg-gray-200 text-[1.4rem]">
+    <span class="icon-[material-symbols--dehaze-rounded]"></span>
+</div>
+{% endmacro icon_button %}

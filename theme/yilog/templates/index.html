@@ -1,66 +1,57 @@
 {% extends "_everkm/layout.html" %}
-{% import "_everkm/blocks.html" as blocks %}
-{% import "_everkm/blocks/nav.html" as nav_blocks %}
+{% import "_everkm/common_blocks.html" as common_blocks %}
+{% import "_everkm/widgets/drawer_aside.html" as drawer_blocks %}
+{% import "_everkm/widgets/article_toc.html" as article_toc_blocks %}
+
+{% block page_keywords -%}
+{% set meta = post_meta(path="/_page/home.md") %}
+{{- meta | get(key="meta/keywords", default="") }}
+{%- endblock page_keywords %}
+
+{% block page_description -%}
+{% set meta = post_meta(path="/_page/home.md") %}
+{{- meta | get(key="meta/description", default="") }}
+{%- endblock page_description %}
+
+{% block js %}
+{{super()}}
+<script>window.everkm.bootstrap('home')</script>
+{% endblock js %}
 
 
 {% block body %}
-<div class="block-container space-y-6">
-    <h1 class="text-4xl font-extrabold mt-6"><a href="{{base_url()}}/">{{__cfg.site.name}}</a></h1>
-    <p class="text-[95%] text-black/60">{{__cfg.site.summary}}</p>
+<div class="mx-auto mb-10 px-6 lg:px-8 markdown-body pt-4">
+  {% set doc = post_detail(path="/_page/home.md") %}
 
-    {% set page_size = __cfg | get(key="page_size", default=5) %}
-    {% set page_no =__qs.page | default(value=1) | int %}
-    {% set start = (page_no - 1) * page_size %}
-    {% set end = start + page_size %}
-    {% set items = posts(dir="/", recursive=true) %}
-    {% set page_count = script(content="Math.ceil(args.val)", val = items | length / 5 ) %}
+  <!-- <h1 class="text-center">{{doc.title}}</h1> -->
 
-    {% if page_no < 2 and post_exist(path="/_page/home.md") %}
-        {% set doc = post_detail(path="/_page/home.md") %}
-        <div class="markdown-body">
-        {{doc.content_html | safe}}
-        </div>
-    {% endif %}
+  {{doc.content_html | safe}}
 
-    {% for doc in items | slice(start=start, end=end) %}
-    <div class="space-y-2">
-        <h2 class="text-2xl">
-            <a class="text-[#005b99] font-medium" href="{{doc.url_path | safe}}?path={{doc.path | urlencode_strict}}&__tpl={{"detail.html"|urlencode_strict}}" target="_blank">
-            {{doc.title}}
-            </a>
-            {%if doc.weight > 0%}<span class="!text-red-500 mark-top"></span>{%endif%}
-        </h2>
-        <div class="text-[#2f353e] font-light text-[90%] number">
-            {{doc.update_time | date(format="%Y-%m-%d %H:%M")}}
-            {% if doc.date != doc.update_time %}<em>更新</em>{% endif %}
-        </div>
-    </div>
+  {% if local_cfg_exist(key='/home_news/dir') %}
+  <h2 class="pb-1 border-b-2">{{local_cfg(key='/home_news/section_name', default='Latest')}}</h2>
+  {% set items = posts(dir=local_cfg(key="/home_news/dir"), recursive=true) %}
+  <ol>
+    {% for doc in items | slice(end=local_cfg(key="/home_news/top_count", default=6)) %}
+    <li class="">
+      <a class="text-black/90"
+        href="{{doc.url_path | safe}}?path={{doc.path | urlencode_strict}}&__tpl={{"details.html"|urlencode_strict}}"
+        target="_blank">
+        {{doc.title}}
+      </a>
+      {%if doc.weight > 0%}<span class="!text-red-500 mark-top"></span>{%endif%}
+      <span class="text-[#2f353e] font-light text-[0.9em] number">
+        {{doc.update_at | date(format=local_cfg(key="date_format", default="%Y-%m-%d %H:%M:%S"))}}
+        {% if doc.date != doc.update_at %}<em>{{t(text="common: updated")}}</em>{% endif %}
+      </span>
+    </li>
     {% endfor %}
+  </ol>
 
-    <div class="space-x-6 flex !mt-10">
-        {% if page_no > 1 %}
-        <div class="flex items-center space-x-1">
-            {% if page_no == 2 %}
-            {{nav_blocks::arrow_left()}}
-            <a href="index.html">上一页</a>
-            {% elif page_no > 2 %}
-            {{nav_blocks::arrow_left()}}
-            <a href="index.p{{page_no-1}}.html?page={{page_no-1}}">上一页</a>
-            {% endif %}
-        </div>
-        {% endif %}
-
-        {% if page_count > 1 %}
-        <div class="">{{page_no}} / {{page_count}}</div>
-        {% endif %}
-            
-        {% if items | length > end %}
-        <div class="flex items-center space-x-1">
-            <a href="index.p{{page_no+1}}.html?page={{page_no+1}}">下一页</a>
-            {{nav_blocks::arrow_right()}}
-        </div>
-        {% endif %}
-    </div>
+  {% if local_cfg_exist(key="/home_news/more/link") %}
+  <a href="{{local_cfg(key='/home_news/more/link') | safe}}">{{local_cfg(key='/home_news/more/title',
+    default='More')}} &raquo;</a>
+  {% endif %}
+  {% endif %}
 
 </div>
 {% endblock body %}
