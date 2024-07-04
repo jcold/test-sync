@@ -65,7 +65,7 @@ slug: daobox-extend-markdown
 
 
 ```js
-console.log('代码块+语法高亮')
+console.log('代码块+语法高亮')要
 ```
 
 
