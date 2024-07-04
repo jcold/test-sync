@@ -27,7 +27,7 @@ slug: daobox-extend-markdown
 
 ## 2023-09-12
 
-比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒发布]，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:
+比较难找到符合需求的Markdown解析器，所以花了些时间自己实现了个。已集成至[道盒发布]，免费使用，Enjoy! :non-potable_water: :-1: :+1: :tada::tada::tada:枯
 
 ---
 
