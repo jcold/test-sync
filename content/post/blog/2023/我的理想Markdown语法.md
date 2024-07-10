@@ -371,7 +371,7 @@ H~2~O
 ## 高亮 ✅
 
 ```markdown
-I need to highlight these ==very important words==.
+I need to highlight these ==very **important** words==.
 ```
 
 I need to highlight these ==very important words==.
