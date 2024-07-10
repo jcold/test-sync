@@ -110,7 +110,7 @@ console.log('代码块+语法高亮')要
 {{everkm::toc(level=1)}}
 ```
 
-mc^2^
+mc^2^sd~3~
 
 可选参数：
 
