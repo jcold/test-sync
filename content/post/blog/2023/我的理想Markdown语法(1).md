@@ -19,7 +19,7 @@ slug: daobox-extend-markdown
 
 ## 2023-09-22
 
-~~新增~
+~~新增~~
 
 * [宏](#everkm-macro)`{{everkm::include()}}`包含
 * [内部链接](#inner-link)
