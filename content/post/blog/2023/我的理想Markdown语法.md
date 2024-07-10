@@ -329,7 +329,7 @@ That's some text with a footnote.[^1]
 ~~删除线~~
 ```
 
-~~ 删除线~~
+~~删除线~~
 
 
 
