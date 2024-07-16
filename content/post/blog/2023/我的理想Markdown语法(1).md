@@ -1,7 +1,10 @@
 ---
-date: 2023-09-10 11:13
-update_at: 2023-10-03 10:57
-slug: daobox-extend-markdown
+date: 20
+up: 20
+girl: 'abc'
+nice:
+  - abc
+  - ef
 ---
 
 {.notice tc bgcolor="#FAC03D"}
@@ -11,7 +14,9 @@ slug: daobox-extend-markdown
 
 [TOC]
 
-# 更新日志2
+[[abc]]
+
+# 更新日志3
 
 ## 2023-10-03
 
@@ -147,9 +152,15 @@ mc^2^sd~3~
 ```markdown
 {{everkm::include(file="_include_test.inc.md", as="md")}}
 ```
+
 {{everkm::include(file="_include_test.inc.md", as="md")}}
 
 ---
+
+```js
+Math.pow(1,2);
+console.log('world')
+```
 
 **包含表格示例：**
 
@@ -418,7 +429,7 @@ I need to highlight these <mark>very important words</mark>.
 
 [TOC]
 
-# 更新日志2
+# 更新日志3
 
 ## 2023-10-03
 
@@ -823,6 +834,3 @@ I need to highlight these <mark>very important words</mark>.
 [道盒发布]: https://publish.everkm.cn
 
 [^slugify]: 通过对文本转换，从而生成有效链接地址。英文字母数字保持原样，空格替换为`-`，中文每个字符转换拼音后，使用`-`连接。==注:exclamation:==：字母+中文的连接处没有连字符`-`，如果需要请在中间添加英文空格。
-
-
-[道盒发布]: https://publish.everkm.cn
