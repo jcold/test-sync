@@ -7,7 +7,7 @@ nice:
   - ef
 ---
 
-{.notice tc bgcolor="#FAC03D"s}
+{.notice tc bgcolor="#FAC03D"}
 *停止更新！请前往[道盒发布]获得支持。*
 
 **本页目录sd**
