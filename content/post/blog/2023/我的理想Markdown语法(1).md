@@ -27,7 +27,7 @@ nice:
 ~~新增~~
 
 * [宏](#everkm-macro)`{{everkm::include()}}`包含
-* [内部链接](#inner-link)
+* [内部链接](#inner-links)
 * [页内锚点](#page-anchor)
 
 ## 2023-09-12
