@@ -15,7 +15,7 @@ nice:
 [TOCs]
 
 [[abc]] [daobox][道盒发布]
-[abc][]
+[abc]()
 
 # 更新日志3
 
