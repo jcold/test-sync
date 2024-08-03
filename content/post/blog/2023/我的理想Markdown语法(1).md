@@ -41,7 +41,7 @@ nice:
 
 # 基础语法 ✅
 
-1. 基于[Markdown标准语法](https://daringfireball.net/projects/markdown/syntax)[^markdown-syntax]。部分格式有几种表达方式，这里仅罗列其一种。
+1. 基于[Markdown标准语法](https://dasringfireball.net/projects/markdown/syntax)[^markdown-syntax]。部分格式有几种表达方式，这里仅罗列其一种。
 2. 补充[Github Markdown](https://github.github.com/gfm/)[^gfm]扩展语法。
 
 <pre>
