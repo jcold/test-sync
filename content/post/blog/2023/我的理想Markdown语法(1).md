@@ -14,7 +14,7 @@ nice:
 
 [TOCs]sd
 
-[[abcss]] [daobox][道s盒发s布s]
+[[abcss]] [daobox][道s盒发s_page/home.md]
 [abc]()
 
 # 更新日志3
