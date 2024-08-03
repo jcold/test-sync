@@ -14,7 +14,7 @@ nice:
 
 [TOCs]sd
 
-[[abcss]] [daobox][渔樵问对.md]
+[[abcss]] [daobox][渔樵问对]
 [abc]()
 
 # 更新日志3
