@@ -17,6 +17,7 @@ nice:
 [[abcsvvss]] [daoboxs][渔樵问v对]
 [abc](s)
 [s渔樵问s对的副本.md]
+[^abc]
 
 <https://www.daobox.cn>
 
