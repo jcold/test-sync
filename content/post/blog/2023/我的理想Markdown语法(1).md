@@ -12,7 +12,7 @@ nice:
 
 **本页目录sd**
 
-[TOCs]sd
+[TOC]
 
 [[abcsvvss]] [daoboxs][渔樵问vvv对]
 [abc](s)
