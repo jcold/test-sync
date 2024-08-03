@@ -14,7 +14,7 @@ nice:
 
 [TOCs]sd
 
-[[abcsvs]] [daoboxs][渔樵问对]
+[[abcsvvss]] [daoboxs][渔樵问f对]
 [abc]()
 [s渔樵问对的副本.md]
 
