@@ -19,7 +19,7 @@ nice:
 [abc](s2)
 [s渔樵问s对的副本.md]
 [^abcf_page/home.sdsmsd vsdsdsdssdds]
-![abc][http://abc.com]
+![abc][http://abc.sdom]
 
 <https://www.daobox.cn>
 
