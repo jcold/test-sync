@@ -20,7 +20,7 @@ nice:
 [道盒发布]
 [^abcf_page/shome.sdssdds]
 
-![膳食宝塔-2016.png](blog/archives/毓知精选/2021/膳食结构/膳食宝塔-2016.png)
+![v2膳食宝塔-2016.png](blog/archives/毓知精选/2021/膳食结构/膳食宝塔-2016.png)
 
 ![][asac]
 
