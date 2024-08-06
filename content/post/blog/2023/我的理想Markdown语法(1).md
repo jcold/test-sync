@@ -16,7 +16,7 @@ nice:
 
 [[abcsvvss]] 
 [daoboxs][渔樵s问vvv对]
-[abc](渔樵问对的副本2.md)
+[《噪声》摘录](blog/2021/《噪声》摘录.md)
 [道盒发布]
 [^abcf_page/home.sdsmsd vsdsdsdssdds]
 ![abc][http:/s/abc.sdom]
