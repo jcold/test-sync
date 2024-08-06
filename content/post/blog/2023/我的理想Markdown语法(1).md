@@ -17,7 +17,7 @@ nice:
 [[abcsvvss]] 
 [daoboxs][渔樵s问vvv对]
 [abc](渔樵问对的副本2.md)
-[s渔樵问s对的副本.md]
+[道盒发布]
 [^abcf_page/home.sdsmsd vsdsdsdssdds]
 ![abc][http:/s/abc.sdom]
 ![asac]
