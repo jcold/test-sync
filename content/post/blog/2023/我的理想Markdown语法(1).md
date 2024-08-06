@@ -15,8 +15,8 @@ nice:
 [TOC]
 
 [[abscsvvss]] 
-[][道盒发布]
-[《噪声》摘录](blog/2021/《噪声》摘录.md)
+[daoboxs][渔樵s问vvv对]
+[23年秋又游大花山](blog/2023/23年秋又游大花山.md)
 [道盒发布]
 [^abcf_page/shome.sdssdds]
 ![abc][http:/s/abc.sdom]
