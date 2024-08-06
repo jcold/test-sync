@@ -18,7 +18,7 @@ nice:
 [daoboxs][渔樵s问vvv对]
 [《噪声》摘录](blog/2021/《噪声》摘录.md)
 [道盒发布]
-[^abcf_page/shome.sdssdds]
+[^abcf_page/shosme.sdssdds]
 ![abc][http:/s/abc.sdom]
 ![asac]
 
