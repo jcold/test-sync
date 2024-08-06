@@ -19,7 +19,7 @@ nice:
 [23年秋又游大花山](blog/2023/23年秋又游大花山.md)
 [道盒发布]
 [^abcf_page/shome.sdssdds]
-![abc][http:/s/abcss.sdom]
+![abc][http:/s/abcss.ssdom]
 ![asac]
 
 <https://www.daobox.cn>
