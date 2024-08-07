@@ -14,7 +14,7 @@ nice:
 
 [TOC]
 
-[[blog/archives/毓知精选/2021/膳食结构/膳食宝塔-2016.png]] 
+[[blog/archives/毓知精选/2021/我是认真的吗？.md]] 
 [daoboxs][渔樵s问vvv对]
 [23年秋又游大花山](blog2021/2023/23年秋又游大花山.md)
 [道盒发布]
