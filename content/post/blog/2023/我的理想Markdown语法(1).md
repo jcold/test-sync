@@ -24,7 +24,7 @@ nice:
 
 ![][asac]
 
-[]
+[《噪声》摘录](blog/2021/《噪声》摘录.md)
 
 <https://www.daobox.cn>
 
