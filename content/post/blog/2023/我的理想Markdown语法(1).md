@@ -24,6 +24,8 @@ nice:
 
 ![][asac]
 
+[]
+
 <https://www.daobox.cn>
 
 [asac]: http://log.gif
