@@ -16,7 +16,7 @@ nice:
 
 [[blog/2021/《噪声》摘录.md]] 
 [daoboxs][渔樵s问vvv对]
-[23年秋又游大花山](blog202/2023/23年秋又游大花山.md)
+[23年秋又游大花山](blog2021/2023/23年秋又游大花山.md)
 [道盒发布]
 [^abcf_page/shome.sdssdds]
 
