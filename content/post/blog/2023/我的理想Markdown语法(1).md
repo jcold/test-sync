@@ -33,7 +33,7 @@ nice:
 [v3]: http://log.gif
 
 
-[[blog/2023/机器指纹计算.md]]
+[[blog/2023/机器指纹计算.md#]]
 
 [就这么开始了](blog/archives/毓知精选/2021/就这么开始了.md)
 
