@@ -21,7 +21,7 @@ nice:
 [包含外部文件 ✅](#bao-han-wai-bu-wen-jian-white-check-mark)
 [^abcf_page/shome.sdssdds]
 
-[](2)
+[渔樵问对的副本2](/渔樵问对的副本2.md)
 
 [[#biao-ge-white-check-mark]]
 
