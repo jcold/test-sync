@@ -14,7 +14,7 @@ nice:
 
 [TOC]
 
-[[/blog/archives/毓知精选/2021/思考，快与慢.md#zuo-shi-qian-yan-shi]] 
+[[/blog/archives/毓知精选/2021/日常必修课——冥想.md#di-si-yao-zen-yang-jin-xing-ming-xiang]] 
 [daoboxs][渔]
 [23年秋又游大花山](/blog/2021/托付终身的产品.md#)
 [道盒发布]
