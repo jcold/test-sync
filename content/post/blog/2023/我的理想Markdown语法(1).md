@@ -21,6 +21,8 @@ nice:
 [包含外部文件 ✅](#bao-han-wai-bu-wen-jian-white-check-mark)
 [^abcf_page/shome.sdssdds]
 
+[《噪声》摘录](/blog/2021/《噪声》摘录.md)
+
 [[#biao-ge-white-check-mark]]
 
 [包含外部文件 ✅](#chang-yong-fu-hao-white-check-mark)
