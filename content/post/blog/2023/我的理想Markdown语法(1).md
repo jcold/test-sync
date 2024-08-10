@@ -14,7 +14,7 @@ nice:
 
 [TOC]
 
-[[/blog/archives/毓知精选/2021]] 
+[[/blog/archives/毓知精选/2021/日常必修课——体力运动开始.md]] 
 [daoboxs][渔]
 [23年秋又游大花山](/blog/2021/托付终身的产品.md#)
 [道盒发布]
