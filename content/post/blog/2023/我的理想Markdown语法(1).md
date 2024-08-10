@@ -16,7 +16,7 @@ nice:
 
 [[../archives/毓知精选/2021/日常必修课——健康饮食.md]] 
 [daoboxs][渔]
-[23年秋又游大花山](/blog/2021/获取健康向上的生活很难吗？.md)
+[23年秋又游大花山](../2021/《噪声》摘录.md)
 [道盒发布]
 [包含外部文件 ✅](#bao-han-wai-bu-wen-jian-white-check-mark)
 [^abcf_page/shome.sdssdds]
