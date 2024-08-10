@@ -14,7 +14,7 @@ nice:
 
 [TOC]
 
-[[/blog/archives/毓知精选/2021/思考，快与慢.md#yin-shui-ji-xian-tan]] 
+[[/blog/archives/毓知精选/2021/思考，快与慢.md#di-san-bu-fen]] 
 [daoboxs][渔]
 [23年秋又游大花山](/blog/2021/托付终身的产品.md#)
 [道盒发布]
