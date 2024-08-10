@@ -14,7 +14,7 @@ nice:
 
 [TOC]
 
-[[/blog/archives/毓知精选/2021/思考者.jpeg]] 
+[[/blog/archives/毓知精选/2021/日常必修课——健康饮食.md]] 
 [daoboxs][渔]
 [23年秋又游大花山](/blog/2021/获取健康向上的生活很难吗？.md)
 [道盒发布]
