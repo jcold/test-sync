@@ -16,7 +16,7 @@ nice:
 
 [[blog/archives/毓知精选/2021/我是认真的吗？.md#]] 
 [daoboxs][渔]
-[23年秋又游大花山](blog/2021/托付终身的产品.md)
+[23年秋又游大花山](/blog/2021/托付终身的产品.md#)
 [道盒发布]
 [^abcf_page/shome.sdssdds]
 
@@ -26,7 +26,7 @@ nice:
 
 ![][v2]
 
-[《噪声》摘录](blog/2021/《噪声》摘录.md)
+[《噪声》摘录](blog/2021/《噪声》摘录.md#)
 
 <https://www.daobox.cn>
 
