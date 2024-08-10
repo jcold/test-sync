@@ -31,7 +31,7 @@ nice:
 
 ![][v2]
 
-[《噪声》摘录](/blog/2021/《噪声》摘录.md#)
+[《噪声》摘录](../2021/《噪声》摘录.md#jian-shao-zao-sheng-liu-da-yuan-ze)
 
 <https://www.daobox.cn>
 
