@@ -14,7 +14,7 @@ nice:
 
 [TOC]
 
-[[../archives/毓知精选/2021/日常必修课——冥想.md#di-san-yao-ming-xiang-duo-jiu]] 
+[[../archives/毓知精选/2021/日常必修课——健康饮食.md#ke-pu]] 
 [daoboxs][渔]
 [23年秋又游大花山](../2021/《噪声》摘录.md)
 [道盒发布]
