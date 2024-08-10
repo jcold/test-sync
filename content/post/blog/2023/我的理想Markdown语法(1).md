@@ -27,7 +27,7 @@ nice:
 
 [包含外部文件 ✅](#chang-yong-fu-hao-white-check-mark)
 
-![膳食宝塔-2016.png](/blog/archives/毓知精选/2021/膳食结构/食物热量1.jpeg)
+![膳食宝塔-2016.png](../archives/毓知精选/2021/膳食结构/食物热量1.jpeg)
 
 ![][v2]
 
