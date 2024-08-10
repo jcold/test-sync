@@ -16,7 +16,7 @@ nice:
 
 [[/blog/archives/毓知精选/2021/日常必修课——冥想.md#di-si-yao-zen-yang-jin-xing-ming-xiang]] 
 [daoboxs][渔]
-[23年秋又游大花山](/blog/2021/托付终身的产品.md#)
+[23年秋又游大花山](/blog/2021/托付终身的产品.md#tuo-fu-zhong-shen-de-chan-pin)
 [道盒发布]
 [包含外部文件 ✅](#bao-han-wai-bu-wen-jian-white-check-mark)
 [^abcf_page/shome.sdssdds]
