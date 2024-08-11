@@ -30,7 +30,7 @@ nice:
 ![膳食宝塔-2016.png](../archives/毓知精选/2021/思考者.jpeg)
 
 ![][v2]
-[[备案主体被我不小心注销了.md]]
+[[AI作文：你若盛开，蝴蝶自来.md]]枯
 
 [《噪声》摘录](../2021/《噪声》摘录.md#gai-jin-pan-duan-bing-fang-zhi-chu-cuo)
 
