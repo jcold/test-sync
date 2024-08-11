@@ -49,7 +49,7 @@ nice:
 
 
 
-```
+## 扩展nt
 
 带有扩展属性的[道盒](https://www.everkm.cn){color=orangered}链接。
 
@@ -58,20 +58,11 @@ nice:
 
 ## 段落属性 ✅
 
-```markdown
-{bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em corner=0.5em}
-这是一段区块示例内容，它拥有扩展属性。
-```
 
 {bgcolor="rgba(0,0,0,0.1)" color=blue underline pa=1em corner=0.5em}
 这是一段区块示例内容，它拥有扩展属性。
 
 ## 文字颜色、背景色、字体 ✅
-
-```markdown
-{color=red, bgcolor=yellow .nice}#赤色#
-{font=宋体}#我是有不一样的字体#
-```
 
 我有{color=red, bgcolor=yellow .nice .girl}#赤色#的文本和{color=blue}#蓝色#内容。
 
