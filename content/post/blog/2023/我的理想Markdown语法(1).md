@@ -23,7 +23,7 @@ nice:
 
 [渔樵问对的副本2](../2021/《噪声》摘录.md)
 
-[[#biao-ge-white-check-mark]]
+[[#ding-yi-lie-biao-definition-lists-white-check-mark]]
 
 [包含外部文件 ✅](#chang-yong-fu-hao-white-check-mark)
 
