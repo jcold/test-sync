@@ -42,7 +42,7 @@ nice:
 [v2]: http://log.gif
 [v3]: http://log.gif
 
-{hell .girl .nice.main}
+{hell .girl .nice }
 [[/blog/2023/机器指纹计算.md]]
 
 
