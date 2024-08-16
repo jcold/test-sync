@@ -7,7 +7,7 @@ nice:
   - ef
 ---
 
-{.notice tc s, a=32 bgcolor="#FAC03D" .main bgcolor="#FAC03D"}
+{.notice tc s, a=32 bgcolor="#FAC03D" .main bgcolor="#FAC03D" color="orangered"}
 *停止更新！请前往[道盒发布]获得支持。*
 
 **本页目录sd**
