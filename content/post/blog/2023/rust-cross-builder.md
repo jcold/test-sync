@@ -1,4 +1,4 @@
-[]()---
+---
 title: Rust 跨平台交叉编译
 date: 2023-10-11 15:48
 slug: rust-cross-builder
