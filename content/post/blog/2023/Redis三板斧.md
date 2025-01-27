@@ -4,7 +4,7 @@ draft: false
 slug: redis-tips
 ---
 
-### 执行Lua脚本
+### 执行Lua脚本s
 
 ```bash
 # 执行lua脚本，并传递参数
