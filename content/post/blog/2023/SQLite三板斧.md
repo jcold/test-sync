@@ -9,4 +9,4 @@ daobox.db .schema > latest_database.sql
 ```
 [asac]nice
 
-[dayu.me]
+[.]
